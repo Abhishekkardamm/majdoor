@@ -29,7 +29,7 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
   background: #2597f4;
-  border-radius: 5rem;
+  border-radius: 3rem;
 }
 
 section {
@@ -50,6 +50,7 @@ section {
 
 .btn {
   display: inline-block;
+  border-radius:1cm;
   margin-top: 1rem;
   padding: 1rem 3rem;
   cursor: pointer;
@@ -64,6 +65,7 @@ section {
   background: #2597f4;
   border-color: #2597f4;
   color: #fff;
+  
 }
 
 .header .contact-info {
@@ -683,6 +685,7 @@ section {
   color: #fff;
   margin-right: .3rem;
   text-align: center;
+  border-radius: 5rem
 }
 
 .footer .box-container .box .share a:hover {
