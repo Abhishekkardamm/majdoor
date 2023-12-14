@@ -1,0 +1,27 @@
+section:not(#header,#footer){
+    margin: 80px 0px;
+
+}
+
+#header{
+    background-color: brown;
+    padding: 15px 0px;
+}
+#header button{
+    float:right;
+}
+
+#header h5{
+    color:white;
+}
+
+#footer{
+    padding:10px 0px;
+    background-color: brown;
+}
+
+#footer h4{
+    text-align: center;
+    color: white;
+    font-size: 13px;
+}

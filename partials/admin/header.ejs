@@ -1,0 +1,14 @@
+<section id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"><h5>Welcome <%=username%></h5></div>
+            <div class="col-md-8"><a href="/logout"><button class="btn btn-danger">Logout</button></a>
+                <a href="/profileupdate"><button class="btn btn-success me-2">Profile Update</button></a>
+                <a href="/profiles"><button class="btn btn-success me-2">ALL Profiles</button></a>
+                <%if(username=='srai88723@gmail.com'){%>
+                <a href="/Majdoor_Dashbord"><button class="btn btn-success me-2">Dashboard</button></a>
+                <%}%>
+            </div>
+        </div>
+    </div>
+</section>
