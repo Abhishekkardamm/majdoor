@@ -1,0 +1,10 @@
+#mreg{
+    align-items: center;
+    display:flex;
+    height:630px;
+}
+
+
+#mreg h2{
+    text-align: center;
+}
