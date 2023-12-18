@@ -860,6 +860,11 @@ input.search-submit {
   color: #2597f4;
 }
 
+
+
+
+
+
 @media (max-width: 1200px) {
   .header .contact-info {
     padding: 2rem 5%;
@@ -929,6 +934,7 @@ input.search-submit {
     text-align: center;
   }
 }
+
 
 @media (max-width: 450px) {
   html {

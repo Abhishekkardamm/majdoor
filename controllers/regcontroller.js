@@ -2,6 +2,7 @@ const Reg = require('../models/reg')
 const nodemailer = require('nodemailer')
 const bcrypt = require('bcrypt')
 
+
 exports.loginpage = (req, res) => {
     try {
         res.render('login.ejs', { message: '' })
@@ -241,4 +242,8 @@ exports.loginpagex=(req,res)=>{
 }
 exports.Majdoor_Dashbord=(req,res)=>{
     res.render('Majdoor_Dashbord.ejs')
+}
+
+exports.md=(req,res)=>{
+    res.render('majdoor/majdoordata.ejs')
 }

@@ -6,6 +6,9 @@ router.post('/',mjregc.regformvalue)
 router.get('/mlogin',mjregc.mlogin)
 router.post('/mlogin',mjregc.mloginvalue)
 router.get('/Majdoor_Dashboard',mjregc.mdashboard)
+router.get('/logout',mjregc.logout)
+router.get('/details',)
+
 
 
 
