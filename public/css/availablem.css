@@ -1,0 +1,117 @@
+body {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1E1E1E;
+    color: #fff;
+    font-family: Elephant;
+    padding: 10px;
+    text-align: center;
+}
+
+header .profile {
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    width: 90%;
+    margin: 100px auto 20px;
+}
+
+.details {
+    flex: 1;
+    padding: 20px;
+}
+
+.labors-list {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.labor-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.labor-card:hover {
+    background-color: #f0f0f0;
+}
+
+.labor-card img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.selected-labor {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* text-align: center; */
+    width: 80%;
+    margin: 20px;
+}
+
+.selected-labor img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.gallery {
+    margin-top: 20px;
+}
+
+.gallery img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.hire-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hire-button:hover {
+    background-color: #45a049;
+}

@@ -1,4 +1,5 @@
 const Reg = require('../models/reg')
+const majdoorreg=require('../models/majdoorreg')
 const nodemailer = require('nodemailer')
 const bcrypt = require('bcrypt')
 
@@ -158,7 +159,7 @@ exports.profileupdate = async (req, res) => {
     } else {
         await Reg.findByIdAndUpdate(id, { firstName: fname, LastName: lname, gender: gender, desc: about, address: add, mobile: mobile })
     }
-    res.redirect('profileupdate')
+    res.redirect('/profiles')
 
 }
 
@@ -244,6 +245,12 @@ exports.Majdoor_Dashbord=(req,res)=>{
     res.render('Majdoor_Dashbord.ejs')
 }
 
-exports.md=(req,res)=>{
-    res.render('majdoor/majdoordata.ejs')
-}
+// exports.md=(req,res)=>{
+//     res.render('majdoor/majdoordata.ejs')
+// }
+
+// exports.mdetails=async(req,res)=>{
+//     const record=await majdoorreg.find()
+//     res.render('majdoor/majdoordata.ejs',)
+// }
+

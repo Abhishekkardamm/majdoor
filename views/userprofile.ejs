@@ -3,29 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/customer.css">
     <title>Document</title>
 </head>
 <body>
-           <%-include('../partials/admin/header.ejs')%>
-           <div class="container">
+           <!-- <%-include('../partials/admin/header.ejs')%> -->
+           <!-- <div class="container">
+
             <div class="row">
                 <%record.forEach((result)=>{%>
                     <div class="card" style="width: 18rem;">
-                        <img style="width:80px; height:80px ;border-radius:50%" src="/upload/<%=result.img%>" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title"><%=result.firstName%> <%=result.LastName%></h5>
-                          <p class="card-text"><%=result.desc%></p>
-                          <a href="/contactdetails/<%=result.id%>" class="btn btn-primary">Contacts Details</a>
-                        </div>
-                      </div>
+                    <img style="width:80px; height:80px ;border-radius:50%" src="/upload/<%=result.img%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><%=result.firstName%> <%=result.LastName%></h5>
+                      <p class="card-text"><%=result.desc%></p>
+                      <a href="/contactdetails/<%=result.id%>" class="btn btn-primary">Contacts Details</a>
+                      
+                    </div>
+                  </div>
+                
 
                <% })%>
                 
                 
             </div>
-           </div>    
+           </div>     -->
+
+
+           <header>
+            <h1>MAJDOOR</h1>
+            <div class="profile">
+                <i class="fas fa-user-alt"></i>
+            </div>
+    
+        </header>
+    
+        <div class="main">
+            <div class="search-form">
+                <div class="searchform_input">
+                    <input type="text" id="serviceInput" placeholder="Search for services">
+                    <select name="stype" id="">
+                        <option value="cp">Carpenter</option>
+                        <option value="pp">Painter</option>
+                        <option value="p">Plumber</option>
+                        <option value="ec">Electrician</option>
+                        <option value="m">Mason</option>
+                        <option value="cp">Carpenter</option>
+
+                    </select>
+                    <input type="text" id="locationInput" placeholder="Enter location">
+                    <input type="date" id="booking-date" >
+                </div>
+    
+                
+                <br>
+                    <!-- <button onclick="searchServices()">Search</button> -->
+                    <a href="/availablemajdoor.ejs"><button type="submit">Search</button></a>
+                
+                
+            </div>
+    
+            <div class="section-title">
+                <h3>My Activity</h3>
+            </div>
+    
+            <div class="activity-services">
+                <div class="service-card">
+                    <img src="carpenter_icon.png" alt="Carpenter Icon">
+                    <h4>Carpenter</h4>
+                    <button onclick="searchRecommendedService('Carpenter')">History</button>
+                </div>           
+            </div>
+    
+            <div class="section-title">
+                <h3>Recommended Services For You</h3>
+            </div>
+    
+            <div class="recommended-services">
+                <div class="service-card">
+                    <img src="carpenter_icon.png" alt="Carpenter Icon">
+                    <h4>Carpenter</h4>
+                    <button onclick="searchRecommendedService('Carpenter')">Explore</button>
+                </div>
+                <div class="service-card">
+                    <img src="plumber_icon.png" alt="Plumber Icon">
+                    <h4>Plumber</h4>
+                    <button onclick="searchRecommendedService('Plumber')">Explore</button>
+                </div>
+                <div class="service-card">
+                    <img src="painter_icon.png" alt="Painter Icon">
+                    <h4>Painter</h4>
+                    <button onclick="searchRecommendedService('Painter')">Explore</button>
+                </div>
+                <div class="service-card">
+                    <img src="gardener_icon.png" alt="Gardener Icon">
+                    <h4>Gardener</h4>
+                    <button onclick="searchRecommendedService('Gardener')">Explore</button>
+                </div>
+                <div class="service-card">
+                    <img src="mason_icon.png" alt="Gardener Icon">
+                    <h4>Mason</h4>
+                    <button onclick="searchRecommendedService('Gardener')">Explore</button>
+                </div>
+                
+            </div>
+    
+            <div class="section-title">
+                <h3>You need it, We've got it</h3>
+            </div>
+    
+            <div class="recommended-services">
+                <div class="service-card">
+                    <img src="carpenter_icon.png" alt="Carpenter Icon">
+                    <h4>Carpenter</h4>
+                    <button onclick="searchRecommendedService('Carpenter')">Explore</button>
+                </div>
+                <div class="service-card">
+                    <img src="plumber_icon.png" alt="Plumber Icon">
+                    <h4>Plumber</h4>
+                    <button onclick="searchRecommendedService('Plumber')">Explore</button>
+                </div>
+                <div class="service-card">
+                    <img src="painter_icon.png" alt="Painter Icon">
+                    <h4>Painter</h4>
+                    <button onclick="searchRecommendedService('Painter')">Explore</button>
+                </div>
+                <div class="service-card">
+                    <img src="gardener_icon.png" alt="Gardener Icon">
+                    <h4>Gardener</h4>
+                    <button onclick="searchRecommendedService('Gardener')">Explore</button>
+                </div>
+            </div>
+    
+    <!-- ////////////////////////////////////////////////////////// -->
+            
+            <div class="recommended-services">
+                <div class="service-card">
+                    <img src="carpenter_icon.png" alt="Carpenter Icon">
+                    <h4>Carpenter</h4>
+                    <button onclick="searchRecommendedService('Carpenter')">Explore</button>
+                </div>
+                <div class="service-card">
+                    <img src="plumber_icon.png" alt="Plumber Icon">
+                    <h4>Plumber</h4>
+                    <button onclick="searchRecommendedService('Plumber')">Explore</button>
+                </div>
+                <div class="service-card">
+                    <img src="painter_icon.png" alt="Painter Icon">
+                    <h4>Painter</h4>
+                    <button onclick="searchRecommendedService('Painter')">Explore</button>
+                </div>
+                <div class="service-card">
+                    <img src="gardener_icon.png" alt="Gardener Icon">
+                    <h4>Gardener</h4>
+                    <button onclick="searchRecommendedService('Gardener')">Explore</button>
+                </div> 
+            </div>
+            
+    
+            <div id="results"></div>
+            
+        </div>
+    
+        <script>
+            function searchServices() {
+                // Add logic to fetch and display search results
+                // Update the 'results' div with worker profiles
+                const resultsDiv = document.getElementById('results');
+                resultsDiv.innerHTML = `
+                    <div class="service-card">
+                        <h2>Plumber Name</h2>
+                        <p>Service: Plumbing</p>
+                        <p>Location: City, Country</p>
+                        <p>Available Time: 9:00 AM - 5:00 PM</p>
+                        <button onclick="hireWorker()">Hire</button>
+                    </div>
+                    <!-- Add more worker profiles as needed -->
+                `;
+            }
+    
+            function hireWorker() {
+                // Add logic to handle the hiring process
+                alert('Worker hired successfully!');
+            }
+        </script>
 </body>
 </html>

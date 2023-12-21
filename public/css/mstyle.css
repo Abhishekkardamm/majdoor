@@ -1,9 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
-html{    background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
-  background-size: cover;
-  height:100%;
-}
+   
 
 #feedback-page{
   text-align:center;
@@ -165,6 +161,38 @@ input:focus, textarea:focus {
 .submit:hover .ease{
   width:100%;
   background-color:white;
+}
+
+p.for{
+  margin:15px 0px;
+  padding: 10px;
+}
+
+p.for a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+}
+
+p.cre {
+  text-align: center;
+}
+
+p.al {
+  margin: 35px 0px;
+  text-align: center;
+  color: #fff;
+}
+
+p.al a button {
+  color: #fff;
+  padding: 10px 20px;
+  width: 90%;
+}
+
+p.al a:hover>button {
+  color: #fff;
 }
 
 @media only screen and (max-width: 580px) {

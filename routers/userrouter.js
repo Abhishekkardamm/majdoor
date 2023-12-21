@@ -2,6 +2,7 @@ const router=require('express').Router()
 const regc=require('../controllers/regcontroller')
 const upload=require('../helpers/multer')
 const handlesub=require('../helpers/handlesub')
+const maj=require('../controllers/mjregcontroller')
 
 
 router.get('/',regc.loginpage)
@@ -22,6 +23,8 @@ router.get("/index",regc.indexpage)
 router.get('/logAs',regc.loginpagex)
 router.get('/dashboard',regc.dashboard)
 router.get('/Majdoor_Dashbord',regc.Majdoor_Dashbord)
+router.get('/availablemajdoor',maj.availablemajdoor)
+
 
 
 module.exports=router

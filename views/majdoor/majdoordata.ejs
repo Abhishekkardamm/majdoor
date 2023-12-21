@@ -17,19 +17,21 @@
                 <tr>
                     <th>S.No</th>
                     <th>Name</th>
-                    <th>Age</th>
+                    <!-- <th>Age</th>
                     <th>Address</th>
                     <th>Phone Number</th>
-                    <th>Feedback</th>
+                    <th>Feedback</th> -->
+                    <th>Delete</th>
                 </tr>
+               <%record.forEach((result,key)=>{%>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><%=key+1%></td>
+                    <td><%=result.username%></td>
+                    <td><a href="/admin/deletemajdoor/<%=result.id%>">Delete</a></td>
+                    
                 </tr>
+
+               <%})%>
             </table>
         </div>
     </div>
