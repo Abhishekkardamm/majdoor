@@ -26,6 +26,8 @@ router.get('/Majdoor_Dashbord',regc.Majdoor_Dashbord)
 router.get('/availablemajdoor',maj.availablemajdoor)
 router.post('/profiles',regc.findskills)
 router.get('/smajdoor/:id',maj.smajdoor)
+router.get('/confirmation',regc.confirmed)
+router.post('/smajdoor/:id',regc.confirmedm)
 
 
 module.exports=router

@@ -16,6 +16,9 @@ app.use(session({
     resave:false,
     saveUninitialized:false
 }))
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+});
 app.use('/admin',adminrouter)
 app.use(userrouter)
 app.use('/majdoor',majdoorrouter)

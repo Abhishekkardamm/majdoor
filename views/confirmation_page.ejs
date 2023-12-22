@@ -24,13 +24,21 @@
     <div class="main">
         <div class="hire-details">
             <h2>Booking Confirmation</h2>
-            <h4>Labor Selected</h4>
+             <h4>Labor Selected</h4>
             <div class="details">
-                <img src="labor1.jpg" alt="Labor 1">
-                <p>Name: John Doe
-                <br>Profession: Carpenter
-                <br>Contact Number: 9818373994
-                <br>Hourly Rate: $25</br>
+               
+                <p>Name: <%=record.username%></p>
+                <p>
+                    Skils:<%=record.skills%>
+                </p>
+                <p>
+                    Phone_no:<%=record.mn%>
+                </p>
+                br
+                <p>Location:<%=record.location%></p>
+                <!-- <pre>
+                    <%= JSON.stringify(record, null, 2) %>
+                  </pre> -->
             </div>
     
             <h3>Your Information</h3>
@@ -61,7 +69,8 @@
                 </div>
     
                 <div class="button-container">
-                    <button type="submit" class="request-button" onclick="requestLabor()">Request for Booking</button>
+                    <!-- <button type="submit" class="request-button" onclick="requestLabor()">Request for Booking</button> -->
+                    <button type="submit">Request For Booking</button>
                     <a href="majdoor_profiles.html">
                         <button type="button" class="discard-button">Discard</button>
                     </a>

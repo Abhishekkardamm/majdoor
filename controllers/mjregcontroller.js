@@ -89,6 +89,6 @@ exports.deletemajdoor=async(req,res)=>{
  }
  exports.smajdoor=async(req,res)=>{
     const id=req.params.id
-    const record=await majdoorreg.findById(id)
+    const record=await mjreg.findById(id)
     res.render('confirmation_page.ejs',{record})
 }

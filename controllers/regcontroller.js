@@ -266,5 +266,9 @@ exports.findskills=async(req,res)=>{
     res.render('majdoor/selectedmajdoor.ejs',{record,username})
     
 }
-
-
+exports.confirmed=(req,res)=>{
+    res.render('confirmationpage.ejs')
+}
+exports.confirmedm=(req,res)=>{
+    console.log(req.body)
+}
