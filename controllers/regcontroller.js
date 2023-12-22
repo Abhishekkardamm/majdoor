@@ -130,7 +130,8 @@ exports.adminusers = async (req, res) => {
 exports.userprofiles = async (req, res) => {
     try {
         const username = req.session.username
-        const record = await Reg.find()
+        const record = await majdoorreg.find()
+        console.log(record)
         res.render('userprofile.ejs', { username, record })
     } catch (error) {
         console.log(error.message)
@@ -253,4 +254,17 @@ exports.Majdoor_Dashbord=(req,res)=>{
 //     const record=await majdoorreg.find()
 //     res.render('majdoor/majdoordata.ejs',)
 // }
+// exports.availablemajdoor=async(res,req)=>{
+//     const record=await majdoorreg.find()
+//     console.log(record)
+// }
+
+exports.findskills=async(req,res)=>{
+    const username = req.session.username
+    const {skills}=req.body
+    const record= await majdoorreg.find({skills:skills})
+    res.render('majdoor/selectedmajdoor.ejs',{record,username})
+    
+}
+
 

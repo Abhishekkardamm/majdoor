@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
-    <link rel="stylesheet" href="majdoor_profiles.css">
-     <!-- icons -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
- 
+    <link rel="stylesheet" href="/css/availablem.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
 </head>
+
 <body>
     <header>
         <h1>MAJDOOR</h1>
@@ -29,24 +31,32 @@
             </div>
             <button class="hire-button" onclick="hireLabor()">Hire</button>
         </div>
-        </div>
+    </div>
 
-        <div class="labors-list" id="laborsList">
-            <h2>Available Labors</h2>
-            <div class="labor-card" onclick="showLaborDetails('Labor 1', 'labor1.jpg', 4.5, ['Service A', 'Service B'], '$20/hour', 50, 5, '123-456-7890')">
-                <img src="labor1.jpg" alt="Labor 1">
-                <h4>Labor 1</h4>
+    <div class="labors-list" id="laborsList">
+        <h2>Available Labors</h2>
+
+        <% record.forEach((result, key)=> { %>
+            <div class="labor-card"
+                onclick="showLaborDetails('<%=result.username%>', '<%= result.phone_no %>','<%=result.skills%>','<%=result.location%>','<%=result.username%>')">
+                <img src="<%=result.image %>" alt="Labor <%= key + 1 %>">
+                <h4>Labor <%= key + 1 %>
+                </h4>
+                <h5>
+                    <%= result.username %>
+                </h5>
             </div>
-            <div class="labor-card" onclick="showLaborDetails('Labor 2', 'labor2.jpg', 4.0, ['Service C', 'Service D'], '$25/hour', 40, 10, '987-654-3210')">
+            <% }) %>
+                <!-- <div class="labor-card" onclick="showLaborDetails('Labor 2', 'labor2.jpg', 4.0, ['Service C', 'Service D'], '$25/hour', 40, 10, '987-654-3210')">
                 <img src="labor2.jpg" alt="Labor 2">
                 <h4>Labor 2</h4>
             </div>
             <div class="labor-card" onclick="showLaborDetails('Labor 3', 'labor3.jpg', 3.0, ['Service A', 'Service D'], '$20/hour', 20, 13, '987-654-1210')">
                 <img src="labor3.jpg" alt="Labor 3">
                 <h4>Labor 3</h4>
-            </div>
-            <!-- Add more labor cards as needed -->
-        </div>
+            </div> -->
+                <!-- Add more labor cards as needed -->
+    </div>
     </div>
 
 
@@ -63,20 +73,15 @@
             }
         });
 
-        function showLaborDetails(name, image, rating, services, price, successfulBookings, rejectedBookings, contactNumber) {
+        function showLaborDetails(username, phone_no,skills,location) {
             const selectedLaborDiv = document.getElementById('selectedLabor');
             selectedLaborDiv.innerHTML = `
-                <img src="${image}" alt="${name}">
-                <h3>${name}</h3>
-                <p>Rating: ${rating}</p>
-                <p>Services: ${services.join(', ')}</p>
-                <p>Price: ${price}</p>
-                <p>Successful Bookings: ${successfulBookings}</p>
-                <p>Rejected Bookings: ${rejectedBookings}</p>
-                <p>Contact Number: ${contactNumber}</p>
-                <div class="gallery" id="laborGallery">
-                    <!-- Display labor's gallery images here -->
-                </div>
+                
+                    <h3>username : ${username}</h3> 
+                <p>Contact Number: ${phone_no}</p>
+                <p>Skills: ${skills}</p>
+                <p>Location: ${location}</p>
+                
             `;
             // Add gallery images dynamically (replace with actual image sources)
             const laborGalleryDiv = document.getElementById('laborGallery');
@@ -99,4 +104,5 @@
         }
     </script>
 </body>
+
 </html>

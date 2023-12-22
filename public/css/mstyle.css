@@ -33,7 +33,7 @@
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
-.feedback-input {
+.feedback-input,select{
   color:#3c3c3c;
   font-family: Helvetica, Arial, sans-serif;
   font-weight:500;
@@ -134,7 +134,7 @@ input:focus, textarea:focus {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
-  margin-top:-4px;
+  margin-top:15px;
   font-weight:700;
 }
 

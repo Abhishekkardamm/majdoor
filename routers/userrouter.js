@@ -24,7 +24,8 @@ router.get('/logAs',regc.loginpagex)
 router.get('/dashboard',regc.dashboard)
 router.get('/Majdoor_Dashbord',regc.Majdoor_Dashbord)
 router.get('/availablemajdoor',maj.availablemajdoor)
-
+router.post('/profiles',regc.findskills)
+router.get('/smajdoor/:id',maj.smajdoor)
 
 
 module.exports=router

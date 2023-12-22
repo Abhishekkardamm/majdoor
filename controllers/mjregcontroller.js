@@ -9,11 +9,11 @@ exports.regform = (req, res) => {
 }
 
 exports.regformvalue = async (req, res) => {
-    const { us, mn, pass } = req.body
+    const { us, mn, pass,skills,location } = req.body
     const record= await mjreg.findOne({ username: us ,phone_no:mn})
     //console.log(record)
     if (record == null) {
-        const record = new mjreg({ username: us, phone_no: mn, password: pass })
+        const record = new mjreg({ username: us, phone_no: mn, password: pass,skills:skills,location:location })
         record.save()
         res.render("majdoor/regform.ejs",{message:'successfully register'})
 
@@ -83,6 +83,12 @@ exports.deletemajdoor=async(req,res)=>{
       }
 }
 
-exports.availablemajdoor=(req,res)=>{
-    res.render('majdoor/availablemajdoor.ejs')
+ exports.availablemajdoor=async(req,res)=>{
+    const record=await mjreg.find()
+     res.render('majdoor/availablemajdoor.ejs',{record})
+ }
+ exports.smajdoor=async(req,res)=>{
+    const id=req.params.id
+    const record=await majdoorreg.findById(id)
+    res.render('confirmation_page.ejs',{record})
 }

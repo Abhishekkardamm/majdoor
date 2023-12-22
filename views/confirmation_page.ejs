@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/confirmation_page.css">
+        <!-- icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+       <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"> -->
+    
+</head>
+<body>
+    <header>
+        <h1>MAJDOOR</h1>
+        <div class="profile">
+            <i class="fas fa-user-alt"></i>
+            <i class="fa fa-sign-out" style="color: #ffffff;">lo</i>
+        </div>
+
+    </header>
+    <div class="main">
+        <div class="hire-details">
+            <h2>Booking Confirmation</h2>
+            <h4>Labor Selected</h4>
+            <div class="details">
+                <img src="labor1.jpg" alt="Labor 1">
+                <p>Name: John Doe
+                <br>Profession: Carpenter
+                <br>Contact Number: 9818373994
+                <br>Hourly Rate: $25</br>
+            </div>
+    
+            <h3>Your Information</h3>
+            <form action="#" method="post">
+                <div class="sub-input">
+                    <label for="street">Street Number:</label>
+                    <input type="text" id="street" name="street" required>
+                </div>
+    
+                <div class="sub-input">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+    
+                <div class="sub-input">
+                    <label for="pincode">Pin Code:</label>
+                    <input type="text" id="pincode" name="pincode" required>
+                </div>
+    
+                <div class="sub-input">
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+    
+                <div class="sub-input">
+                    <label for="contact">Contact Number:</label>
+                    <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" required>
+                </div>
+    
+                <div class="button-container">
+                    <button type="submit" class="request-button" onclick="requestLabor()">Request for Booking</button>
+                    <a href="majdoor_profiles.html">
+                        <button type="button" class="discard-button">Discard</button>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ///////script/////// -->
+    <script>
+        function requestLabor() {
+            // Add logic to handle hiring action
+            alert('Your Request has been sent to the labor...');
+        }
+    </script>
+</body>
+
+</html>

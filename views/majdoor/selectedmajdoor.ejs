@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected Majdoort</title>
+    <link rel="stylesheet" href="/css/selectedm.css">
+</head>
+
+<body>
+    <div class="container">
+
+
+        <%record.forEach((item,key)=>{%>
+            <div class="card">
+                <h2 class="majdoorname">
+                    MajdoorName:<%=item.username%>
+                </h2>
+                <p class="skill">
+                    MajdoorSkill: <%=item.skills%>
+                </p>
+                <p class="location">
+                    Majdoor Location:<%=item.location%>
+                </p>
+                <p class="phone_no">
+                    Majdoor Phone_No:<%=item.phone_no%>
+                </p>
+
+
+                <a href="/majdoor/smajdoor<%=item.id%>"><button class="hire-button">Hire</button></a>
+            </div>
+            <%})%>
+    </div>
+    <div class="customer-form">
+        <h3>Your Information</h3>
+        <form action="#" method="post">
+            <div class="sub-input">
+                <label for="street">Street Number:</label>
+                <input type="text" id="street" name="street" required>
+            </div>
+
+            <div class="sub-input">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <div class="sub-input">
+                <label for="pincode">Pin Code:</label>
+                <input type="text" id="pincode" name="pincode" required>
+            </div>
+
+            <div class="sub-input">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+
+            <div class="sub-input">
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="request-button" onclick="requestLabor()">Request for Booking</button>
+                <a href="majdoor_profiles.html">
+                    <button type="button" class="discard-button">Discard</button>
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        
+        
+            $(".hire-button").click(function () {
+                $("body").toggleClass("main");
+            });
+        
+    </script>
+</body>
+
+</html>
