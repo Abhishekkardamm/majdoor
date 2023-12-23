@@ -129,3 +129,131 @@ header .profile {
     cursor: pointer;
     border-radius: 4px;
 }
+
+
+/* Foter css */
+
+.btn {
+    display: inline-block;
+    border-radius:1cm;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    background: #fff;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    color: #334;
+    border: 0.2rem solid #334;
+  }
+  
+  .btn:hover {
+    background: #2597f4;
+    border-color: #2597f4;
+    color: #fff;
+    
+  }
+
+.footer {
+    background: #f5f5f5;
+  
+  }
+  
+  .footer .box-container {
+    
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+  }
+  
+  .footer .box-container .box h3 {
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    color: #334;
+    padding: 1rem 0;
+  }
+  
+  .footer .box-container .box .link {
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #777;
+  }
+  
+  .footer .box-container .box .link i {
+    
+    
+    padding-right: .5rem;
+    color: #2597f4;
+  }
+  
+  .footer .box-container .box .link:hover {
+    color: #2597f4;
+  }
+  
+  .footer .box-container .box .link:hover i {
+    padding-right: 2rem;
+  }
+  
+  .footer .box-container .box p {
+    padding: .1rem 0;
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #777;
+  }
+  
+  .footer .box-container .box p span {
+    color: #2597f4;
+  }
+  
+  .footer .box-container .box .email {
+    width: 80%;
+    border: 0.2rem solid #334;
+    padding: 1.6rem 1.4rem;
+    font-size: 1.6rem;
+    color: #777;
+    margin: 1rem 0;
+  }
+  
+  .footer .box-container .box .share {
+    margin-top: 2rem;
+  }
+  
+  .footer .box-container .box .share a {
+    text-decoration:none;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    background: #334;
+    color: #fff;
+    margin-right: .3rem;
+    text-align: center;
+    border-radius: 5rem;
+
+  }
+  
+  .footer .box-container .box .share a:hover {
+    background: #2597f4;
+  }
+  
+  .footer .credit {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #334;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 0.2rem solid #334;
+    text-align: center;
+  }
+  
+  .footer .credit span {
+    color: #2597f4;
+  }
+  
+  
+  
+  
+  

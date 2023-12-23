@@ -1,0 +1,164 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #2597f4;
+  border-radius: 3rem;
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    
+}
+  /* <!-- second slider -->  */
+  .carousel {
+    padding: .3em .3em 0;
+    background: rgb(240,240,240);
+    text-align: center;
+  }
+  .carousel div {
+    position: relative;
+    margin-bottom: .3em;
+    padding-top: 56.25%;
+  }
+  .carousel iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .carousel span {
+    display: inline-block;
+    word-spacing: 1em;  /* расстояние между картинками */
+  
+  /* прокрутка миниатюр при необходимости */
+    overflow: auto;
+    white-space: nowrap;
+    word-wrap: normal;
+  
+  }
+  .carousel a {
+    position: relative;
+    display: inline-block;
+    max-width: 120px;  /* максимальная ширина миниатюр */
+    width: 25%;  /* ширина миниатюр */
+    border: 1px solid blue;  /* рамка вокруг миниатюр */
+    opacity: .7;  
+    text-decoration: none;
+  }
+  .carousel a:visited,
+  .carousel a:nth-of-type(1) {
+    border-color: #555;  /* рамка вокруг миниатюр просмотренных видео */
+  }
+  .carousel a:hover { 
+    opacity: 1;
+  }
+  .carousel a:not(:active):focus {
+    pointer-events: none;
+  }
+  .carousel a::before {
+    content: "";
+    position: absolute;
+    top: 0em;
+    right: 0em;
+    bottom: 0em;
+    left: 0em;
+    background: rgba(0,0,1,.1);
+    transition: background 0s 9999999s;
+  }
+  .carousel a:nth-of-type(1)::before {
+    background: rgba(255,255,254,.7);
+  }
+  .carousel span:active a::before {
+    background: rgba(0,0,0,0);
+    transition: background 0s;
+  }
+  .carousel span:active a:active::before {
+    background: rgba(255,255,255,.7);
+    transition: background 0s;
+  }
+  .carousel img {
+    max-width: 100%;
+    vertical-align: middle;  /* убрать нижний отступ до рамки под картинкой */
+  }
+  
+
+
+  /* Niche slider  */
+  
+.gallery {
+    display: flex;
+    flex-flow: wrap;
+    border: solid rgb(240,240,240);
+  }
+  .gallery div {  /* блоки видео + списков */
+    flex: 150px;
+    position: relative;
+    text-align: center;
+  }
+  .gallery div:nth-of-type(1) {
+    flex: 10000 1 300px;  /* если ширина менее 300 + 150 = 450px , то списки миниатюр смещаются на нижний ряд, подробнее про свойство flex */
+  }
+  .gallery div::before {
+    content: "";
+    display: block;
+    padding-top: 100px;
+  }
+  .gallery div:nth-of-type(1)::before {
+    padding-top: 56.25%;
+  }
+  .gallery iframe,
+  .gallery span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+  .gallery a {  /* для разнообразия, иконки не затемнены, так проще оценить код галереи видео */
+    display: inline-block;
+    margin-top: 5px;
+  }
+  .gallery a:last-child {
+    margin-bottom: 5px;
+  }
+  .gallery iframe,
+  .gallery img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
