@@ -7,10 +7,11 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="/css/availablem.css">
-    <!-- icons -->
+    <!-- //icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"> -->
 
 </head>
 
@@ -19,19 +20,23 @@
         <h1>MAJDOOR</h1>
         <div class="profile">
             <i class="fa-regular fa-user"></i>
+            <i class="fa fa-sign-out" style="color: #ffffff;">lo</i>
+
         </div>
 
     </header>
 
     <div class="main">
         <div class="details">
-            <h2>Selected Labor Details</h2>
+            <h2>Labor's Details</h2>
             <div class="selected-labor" id="selectedLabor">
                 <!-- Display selected labor details here -->
             </div>
-            <button class="hire-button" onclick="hireLabor()">Hire</button>
+            <a href="confirmation_page.html">
+                <button class="hire-button">Hire</button>
+            </a>
         </div>
-    </div>
+    
 
     <div class="labors-list" id="laborsList">
         <h2>Available Labors</h2>
