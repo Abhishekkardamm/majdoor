@@ -1,5 +1,6 @@
 // const majdoorreg = require('../models/majdoorreg')
 const mjreg = require('../models/majdoorreg')
+const re=require('../models/reg')
 exports.details = (req, res) => {
     res.render('/majdoormdetails.ejs')
 }
@@ -26,8 +27,9 @@ exports.regformvalue = async (req, res) => {
 exports.mlogin = (req, res) => {
     res.render('majdoor/mlogin.ejs', { message: '' })
 }
-exports.mdashboard = (req, res) => {
-    res.render('majdoor/Majdoor_Dashbord.ejs')
+exports.mdashboard = async(req, res) => {
+    const record=await re.find()
+    res.render('majdoor/Majdoor_Dashbord.ejs',{record})
 }
 exports.mloginvalue = async (req, res) => {
     const { us, mn, pass } = req.body
@@ -92,3 +94,4 @@ exports.deletemajdoor=async(req,res)=>{
     const record=await mjreg.findById(id)
     res.render('confirmation_page.ejs',{record})
 }
+
