@@ -9,12 +9,17 @@ html {
     display: flex;
   }
   
-  #check .bi-check-circle {
+  #check #reject {
     width: 30px;
     height: 30px;
     margin: 5px;
   }
-  
+  #check{
+    color: #73AF55;
+  }
+  #reject{
+    color: #e72424;
+  }
   .path {
     stroke-dasharray: 1000;
     stroke-dashoffset: 0;
