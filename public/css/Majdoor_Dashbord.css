@@ -511,8 +511,43 @@ html {
     }
   }
   
+  body {
+    margin: 0;
+    background: #666;
+  }
+  a{
+    text-decoration: none;
+  }
+
   @media (min-width: 992px) {
     body.sidenav-toggled footer.sticky-footer {
       width: calc(100% - 55px);
     }
   }
+  .accept {
+    color: #FFF;
+    height:10px;
+    width:15px;
+    background: #44CC44;
+    padding: 3px 3px;
+    box-shadow: 0 2px 0 0 #2EA62E;
+    border-radius:50%;
+  }
+  .accept:hover {
+    background: #6FE76F;
+    box-shadow: 0 2px 0 0 #7ED37E;
+  }
+  .deny {
+    color: #FFF;
+    height:10px;
+    width:10px;
+    background: tomato;
+    padding: 3px 3px;
+    box-shadow: 0 2px 0 0 #CB4949;
+    border-radius:50%;
+  }
+  .deny:hover {
+    background: rgb(255, 147, 128);
+    box-shadow: 0 2px 0 0 #EF8282;
+  }
+  
