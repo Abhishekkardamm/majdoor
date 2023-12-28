@@ -22,3 +22,194 @@ body {
   text-align: center;
   display: none;
 }
+
+.LookForThisCoolWebsite {
+  font-size: 2em;
+  text-align: center;
+  background-color: #000;
+}
+.LookForThisCoolWebsite a{
+color: #FF0000;
+}
+
+
+
+/* <!-- first slider start-->  */
+
+.slider { /* блок */ 
+  background: rgba(240,240,240,.5);
+  text-align: center;
+}
+
+/* резиновый iframe: чтобы видео занимало всё доступное пространство и пропорционально уменьшалось/увеличивалось при изменении экрана монитора */ 
+.slider div {
+  position: relative;
+  padding-top: 56.25%;
+}
+.slider iframe {
+  position: absolute;
+  top: .5%;
+  left: .5%;
+  width: 99%;
+  height: 99%;
+}
+
+/* стиль CSS для кнопок-переключателей (я немного побаловалась), который можно изменять или вовсе не использовать */ 
+.slider a {  /* вид кнопок */ 
+  display: inline-block;
+  padding: 0 .5em;
+  text-decoration: none;
+  color: blue;
+}
+.slider a:visited {  /* вид кнопок просмотренных видео */ 
+  color: rgb(204,204,203);
+}
+.slider a:hover {  /* вид кнопок при наведении */ 
+  transform: scale(1.5);
+}
+.slider a:not(:active):focus {  /* блокировка второго клика, но не третьего */ 
+  pointer-events: none;
+}
+.slider a::before {  /* из-за Mozilla Firefox приходится использовать псевдоэлемент */ 
+  content: "\25cf";
+  position: absolute;
+  color: rgba(0,0,1,.1);
+  transition: color 0s 9999999s;  /* нужен, чтобы запомнился цвет после нажатия кнопки, подробнее про transition */ 
+}
+.slider a:nth-of-type(1)::before {  /* вид первой кнопки при загрузки страницы */ 
+  color: rgb(0,129,0);
+}
+.slider span:active a::before {  /* для неактивных кнопок псевдоэлемент не нужен */ 
+  color: rgba(0,0,0,0);
+  transition: color 0s;
+}
+.slider span:active a:nth-of-type(1)::before {  /* вид неактивной первой кнопки, чтобы она выглядела как посещённая */ 
+  color: #ccc;
+  transition: color 0s;
+}
+.slider span:active a:active::before {  /* вид нажатой кнопки [в Internet Explorer отсутствует всплытие :active] */ 
+  color: green;
+  transition: color 0s;
+}
+
+
+
+
+/* <!-- second slider -->  */
+.carousel {
+  padding: .3em .3em 0;
+  background: rgb(240,240,240);
+  text-align: center;
+}
+.carousel div {
+  position: relative;
+  margin-bottom: .3em;
+  padding-top: 56.25%;
+}
+.carousel iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.carousel span {
+  display: inline-block;
+  word-spacing: 1em;  /* расстояние между картинками */
+
+/* прокрутка миниатюр при необходимости */
+  overflow: auto;
+  white-space: nowrap;
+  word-wrap: normal;
+
+}
+.carousel a {
+  position: relative;
+  display: inline-block;
+  max-width: 120px;  /* максимальная ширина миниатюр */
+  width: 25%;  /* ширина миниатюр */
+  border: 1px solid blue;  /* рамка вокруг миниатюр */
+  opacity: .7;  
+  text-decoration: none;
+}
+.carousel a:visited,
+.carousel a:nth-of-type(1) {
+  border-color: #555;  /* рамка вокруг миниатюр просмотренных видео */
+}
+.carousel a:hover { 
+  opacity: 1;
+}
+.carousel a:not(:active):focus {
+  pointer-events: none;
+}
+.carousel a::before {
+  content: "";
+  position: absolute;
+  top: 0em;
+  right: 0em;
+  bottom: 0em;
+  left: 0em;
+  background: rgba(0,0,1,.1);
+  transition: background 0s 9999999s;
+}
+.carousel a:nth-of-type(1)::before {
+  background: rgba(255,255,254,.7);
+}
+.carousel span:active a::before {
+  background: rgba(0,0,0,0);
+  transition: background 0s;
+}
+.carousel span:active a:active::before {
+  background: rgba(255,255,255,.7);
+  transition: background 0s;
+}
+.carousel img {
+  max-width: 100%;
+  vertical-align: middle;  /* убрать нижний отступ до рамки под картинкой */
+}
+
+
+/* <!-- third slider -->   */
+
+.gallery {
+  display: flex;
+  flex-flow: wrap;
+  border: solid rgb(240,240,240);
+}
+.gallery div {  /* блоки видео + списков */
+  flex: 150px;
+  position: relative;
+  text-align: center;
+}
+.gallery div:nth-of-type(1) {
+  flex: 10000 1 300px;  /* если ширина менее 300 + 150 = 450px , то списки миниатюр смещаются на нижний ряд, подробнее про свойство flex */
+}
+.gallery div::before {
+  content: "";
+  display: block;
+  padding-top: 100px;
+}
+.gallery div:nth-of-type(1)::before {
+  padding-top: 56.25%;
+}
+.gallery iframe,
+.gallery span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.gallery a {  /* для разнообразия, иконки не затемнены, так проще оценить код галереи видео */
+  display: inline-block;
+  margin-top: 5px;
+}
+.gallery a:last-child {
+  margin-bottom: 5px;
+}
+.gallery iframe,
+.gallery img {
+  max-width: 100%;
+  vertical-align: middle;
+}

@@ -52,7 +52,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="#newbooking">
                         <span class="nav-link-text">बुकिंग</span>
                     </a>
                 </li>
@@ -62,12 +62,6 @@
                     </a>
                 </li>
 
-                <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                    <a class="nav-link" href="tables.html">
-                        <span class="nav-link-text">उन्नति</span>
-                    </a>
-                </li> -->
-
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
                     <a class="nav-link" href="tables.html">
                         <span class="nav-link-text">प्रोफ़ाइल</span>
@@ -75,27 +69,18 @@
                 </li>
 
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                    <a class="nav-link" href="Majdoor_videos.ejs">
+                    <a class="nav-link" href="#mvideo">
                         <span class="nav-link-text">श्रम अधिकार</span>
                     </a>
                 </li>
 
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                    <a class="nav-link" href="tables.html">
-                        <span class="nav-link-text">प्रोफ़ाइल</span>
-                    </a>
-                </li>
 
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                    <a class="nav-link" href="tables.html">
+                    <a class="nav-link" href="#help">
                         <span class="nav-link-text">सहायता</span>
                     </a>
                 </li>
-                <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                    <a class="nav-link" href="tables.html">
-                        <span class="nav-link-text">सेटिंग्स और समर्थन</span>
-                    </a>
-                </li> -->
+                
             </ul>
             <ul class="navbar-nav sidenav-toggler">
                 <li class="nav-item">
@@ -210,7 +195,7 @@
             </ul>
         </div>
     </nav>
-    <div class="content-wrapper">
+    <div class="content-wrapper" id="newbooking">
 
         <!-- Breadcrumbs-->
         <ol class="breadcrumb" style="margin-left: 20px;">
@@ -466,8 +451,30 @@
                 <div class="card-footer small text-muted">अपडेट 11:59 </div>
             </div>
         </div>
+        
+        <div class="text-center" id="mvideo"><h2>LABOUR RIGHTS</h2>
+            <div class="col-lg-4" >
+                <div class="gallery">
+                  <div>
+                    <iframe src="//www.youtube.com/embed/1TYl3jhfEDA?rel=0" allowfullscreen frameborder="0" name="tab"></iframe>
+                  </div>
+                  <div>
+                    <span>
+                    <a href="//www.youtube.com/embed/1TYl3jhfEDA?rel=0&autoplay=1" target="tab"><img src="//img.youtube.com/vi/1TYl3jhfEDA/default.jpg"></a>
+                    <a href="//www.youtube.com/embed/xFa2_PVMeDQ?rel=0&autoplay=1" target="tab"><img src="//img.youtube.com/vi/xFa2_PVMeDQ/default.jpg"></a>
+                    <a href="//www.youtube.com/embed/hSrOpTYKNMw?rel=0&autoplay=1" target="tab"><img src="//img.youtube.com/vi/hSrOpTYKNMw/default.jpg"></a>
+                    <a href="//www.youtube.com/embed/WFhzzJjRncI?rel=0&autoplay=1" target="tab"><img src="//img.youtube.com/vi/WFhzzJjRncI/default.jpg"></a>
+                  </span>
+                 </div>
+                </div>
+                </div></div>
+                
+<br>
+<hr>
+<div id="help">
+<%-include('../../partials/admin/footer.ejs')%>
     </div>
-
+</div>
 
 
     <!-- Breadcrumbs-->
@@ -515,6 +522,8 @@
     </div>
     </div>
 
+
+    
     <script src="https://kit.fontawesome.com/5fb47b5325.js" crossorigin="anonymous"></script>
 </body>
 
