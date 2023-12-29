@@ -22,11 +22,11 @@ exports.registerform = (req, res) => {
 
 exports.signup = async (req, res) => {
     try {
-        const { email, pass } = req.body
+        const { email, pass,name } = req.body
         const convertedpass = await bcrypt.hash(pass, 10)
         const logincheck = await Reg.findOne({ email: email })
         if (logincheck == null) {
-            const record = new Reg({ email: email, password: convertedpass })
+            const record = new Reg({ email: email, password: convertedpass,name:name })
             record.save()
 
 

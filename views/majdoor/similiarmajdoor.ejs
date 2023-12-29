@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Similiar Majdoor</title>
+</head>
+<body>
+    <%record.forEach((result)=>{%>
+        <h2>Majdoor Name:<%=result.username%></h2>
+        <h4>Phone_no:<%=result.phone_no%></h4>
+        <h4>Skills:<%=result.skills%></h4>
+        <h4>Location:<%=result.location%></h4>
+
+   <%})%>
+</body>
+</html>

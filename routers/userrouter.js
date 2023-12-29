@@ -28,6 +28,7 @@ router.post('/profiles',regc.findskills)
 router.get('/smajdoor/:id',maj.smajdoor)
 router.get('/confirmation',regc.confirmed)
 router.post('/smajdoor/:id',regc.confirmedm)
+router.get('/similiarmajdoor/:skills',maj.similiarmajdoor)
 
 
 module.exports=router

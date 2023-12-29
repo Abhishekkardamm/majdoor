@@ -103,31 +103,25 @@
             </div>
     
             <div class="recommended-services">
-                <div class="service-card">
-                    <img src="/images/carpenter_icon.png" alt="Carpenter Icon">
-                    <h4>Carpenter</h4>
-                    <button onclick="searchRecommendedService('Carpenter')">Explore</button>
-                </div>
-                <div class="service-card">
-                    <img src="/images/plumber_icon.png" alt="Plumber Icon">
-                    <h4>Plumber</h4>
-                    <button onclick="searchRecommendedService('Plumber')">Explore</button>
-                </div>
-                <div class="service-card">
-                    <img src="/images/painter_icon.png" alt="Painter Icon">
-                    <h4>Painter</h4>
-                    <button onclick="searchRecommendedService('Painter')">Explore</button>
-                </div>
-                <div class="service-card">
-                    <img src="/images/gardener_icon.png" alt="Gardener Icon">
-                    <h4>Gardener</h4>
-                    <button onclick="searchRecommendedService('Gardener')">Explore</button>
-                </div>
-                <div class="service-card">
-                    <img src="/images/mason_icon.png" alt="Mason Icon">
-                    <h4>Mason</h4>
-                    <button onclick="searchRecommendedService('Mason')">Explore</button>
-                </div>
+                <% const uniqueSkills = Array.from(new Set(record.map(result => result.skills))).filter(Boolean); %>
+
+<% uniqueSkills.forEach(skill => { %>
+  <div class="service-card">
+    <img src="/upload/default-img.jpg" alt="<%= skill %> Icon">
+    <h4><%= skill %></h4>
+    <a href="/similiarmajdoor/<%= skill %>"><button>Explore</button></a>
+  </div>
+<% }); %>
+                <!-- <%record.forEach((result)=>{%>
+                    <div class="service-card">
+                        <img src="/upload/<%=result.img%>" alt="Carpenter Icon">
+                        <h4><%=result.skills%></h4>
+                        <a href="/similiarmajdoor/<%=result.skills%>"><button>Explore</button></a>
+                    </div>
+
+             <%   })%> -->
+             <!-- <button onclick="searchRecommendedService('Carpenter')">Explore</button> -->
+                
                 
             </div>
     

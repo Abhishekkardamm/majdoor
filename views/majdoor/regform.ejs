@@ -14,7 +14,10 @@
     <div id="form-main">
         <div id="form-div">
             <h2 class="sign">Sign Up</h2>
-            <form class="form" id="form1" method="post">
+            <form class="form" id="form1" method="post" enctype="multipart/form-data">
+                <p class="name">
+                    <input class="feedback-input" type="file" name="img" id="">
+                </p>
                 <p class="name">
                     <input name="us" type="text"
                         class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name"
@@ -31,6 +34,8 @@
                     <option value="mason">mason</option>
                     <option value="labour">labour</option>
                     <option value="electrician">electrician</option>
+                    <option value="gardener">Gardener</option>
+                    <option value="carpenter">Carpenter</option>
                 </select>
                
                 <select name="location" id="">
@@ -39,6 +44,9 @@
                     <option value="mumbai">Mumbai</option>
                     <option value="kolkata">Kolkata</option>
                     <option value="Delhi">Delhi</option>
+                    <option value="UP">UP</option>
+                    <option value="Jharkhand">Jharkhand</option>
+
                 </select>
                 <div class="submit">
                     <input type="submit" value="Register" id="button-blue" />
