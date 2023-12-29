@@ -1,91 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/confirmation_page.css">
-        <!-- icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Confirm Booking</title>
 
-        <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
-       <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"> -->
-    
+    <link rel="stylesheet" href="/css/confirmation_page.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
+
 <body>
+
     <header>
         <h1>MAJDOOR</h1>
         <div class="profile">
             <i class="fas fa-user-alt"></i>
-            <i class="fa fa-sign-out" style="color: #ffffff;">lo</i>
+            <i class="fa fa-sign-out"></i>
         </div>
 
     </header>
-    <div class="main">
+    <br><br><br>
+    <br><br>
+    <div  class="container main">
         <div class="hire-details">
-            <h2>Booking Confirmation</h2>
-             <h4>Labor Selected</h4>
-            <div class="details">
-               
-                <p>Name: <%=record.username%></p>
-                <p>
-                    Skils:<%=record.skills%>
-                </p>
-                <p>
-                    Phone_no:<%=record.mn%>
-                </p>
-                br
-                <p>Location:<%=record.location%></p>
-                <!-- <pre>
-                    <%= JSON.stringify(record, null, 2) %>
-                  </pre> -->
-            </div>
-    
-            <h3>Your Information</h3>
-            <form action="#" method="post">
-                <div class="sub-input">
-                    <label for="street">Street Number:</label>
-                    <input type="text" id="street" name="street" required>
-                </div>
-    
-                <div class="sub-input">
-                    <label for="city">City:</label>
-                    <input type="text" id="city" name="city" required>
-                </div>
-    
-                <div class="sub-input">
-                    <label for="pincode">Pin Code:</label>
-                    <input type="text" id="pincode" name="pincode" required>
-                </div>
-    
-                <div class="sub-input">
-                    <label for="state">State:</label>
-                    <input type="text" id="state" name="state" required>
-                </div>
-    
-                <div class="sub-input">
-                    <label for="contact">Contact Number:</label>
-                    <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" required>
-                </div>
-    
-                <div class="button-container">
-                    <!-- <button type="submit" class="request-button" onclick="requestLabor()">Request for Booking</button> -->
-                    <button type="submit">Request For Booking</button>
-                    <a href="majdoor_profiles.html">
-                        <button type="button" class="discard-button">Discard</button>
-                    </a>
-                </div>
-            </form>
-        </div>
-    </div>
+            <h2 class="text-center">Majdoor Booking Confirmation</h2>
 
-    <!-- ///////script/////// -->
-    <script>
-        function requestLabor() {
-            // Add logic to handle hiring action
-            alert('Your Request has been sent to the labor...');
-        }
-    </script>
+
+
+            <div class="table-responsive mx-auto">
+
+                <table class="table">
+
+                    <tbody>
+                        <!-- <div class="container text-center">
+                            <h4>Majdor Detail's </h4>
+                        </div> -->
+                        <tr>
+                            <td style="width: 20%;">
+                                <!-- User Image -->
+                                <img src="/images/carpenter-svgrepo-com.svg" alt="User Image"
+                                    class="img-fluid rounded-circle" style="max-width: 100%;">
+                            </td>
+                            <td>
+                                <!-- User Details Table -->
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th>Name</th>
+                                            <td>
+                                                <%=record.username%>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Skills</th>
+                                            <td>
+                                                <%=record.skills%>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Phone Number</th>
+                                            <td>
+                                                <%=record.mn%>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Location</th>
+                                            <td>
+                                                <%=record.location%>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr>
+            <form id="formAwesome">
+                <div class="form-group row">
+                    <label for="firstName" class="col-sm-6 col-form-label">Street Number:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="Street" placeholder="Badarpur" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="Pin code " class="col-sm-6 col-form-label">Pin code </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="lastName" placeholder="Doe" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="State " class="col-sm-6 col-form-label">State </label>
+                    <div class="col-sm-6">
+                        <input type="email" class="form-control" id="State" placeholder="New delhi " required>
+                    </div>
+                </div>
+
+                <!-- <div class="form-group row">
+                    <label for="awesomeness" class="col-sm-6 col-form-label">Awesomeness Level</label>
+                    <div class="col-sm-6">
+                        <select class="form-control" id="awesomeness" required>
+                            <option value="">Select...</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="expert">Expert</option>
+                        </select>
+                    </div>
+                </div> -->
+
+                <div class="form-group row">
+                    <label for="Contact Number" class="col-sm-6 col-form-label">Contact Number </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="occupation" placeholder="8800120225"
+                            required>
+                    </div>
+                </div>
+
+
+        </div>
+
+        <div class="container text-center">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="awesomeCheck" required>
+                <label class="form-check-label" for="awesomeCheck">
+                    I confirm that Booking.
+                </label>
+            </div>
+        </div>
+
+        <hr>
+
+        
+        <div class="button-container text-center">
+            <button type="submit" class="btn btn-mod btn-border btn-large animation-one">
+                <span>Request For Booking</span>
+            </button>
+            <a href="majdoor_profiles.html">
+                <button type="button" class="btn btn-mod btn-border btn-large animation-one">
+                    <span>Discard</span>
+                </button>
+            </a>
+        </div>
+
+            </form>
+
+            <br>
+            <br>
+        </div>
+
+        <script>
+            document.getElementById('formAwesome').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                var firstName = document.getElementById('firstName').value;
+                var lastName = document.getElementById('lastName').value;
+                var email = document.getElementById('email').value;
+                var awesomeness = document.getElementById('awesomeness').value;
+                var occupation = document.getElementById('occupation').value;
+
+                console.log('Form submitted:', {
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    awesomeness: awesomeness,
+                    occupation: occupation
+                });
+
+                this.reset();
+                alert('Form submitted successfully!');
+            });
+        </script>
+
+        <!-- jQuery and Bootstrap Bundle JS -->
+        <script src="https://kit.fontawesome.com/5fb47b5325.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>

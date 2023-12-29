@@ -42,7 +42,7 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <a class="navbar-brand" href="index.html"><%=username%>
+        <a class="navbar-brand" href="index.html">बलदेव
         </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -52,50 +52,35 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="#newbooking">
                         <span class="nav-link-text">बुकिंग</span>
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-                    <a class="nav-link" href="charts.html">
+                    <a class="nav-link" href="#pastbooking">
                         <span class="nav-link-text">रिकॉर्ड</span>
                     </a>
                 </li>
 
-                <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                    <a class="nav-link" href="tables.html">
-                        <span class="nav-link-text">उन्नति</span>
-                    </a>
-                </li> -->
-
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                    <a class="nav-link" href="/majdoor/tables">
+                    <a class="nav-link" href="tables.html">
                         <span class="nav-link-text">प्रोफ़ाइल</span>
                     </a>
                 </li>
 
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                    <a class="nav-link" href="Majdoor_videos.ejs">
+                    <a class="nav-link" href="#mvideo">
                         <span class="nav-link-text">श्रम अधिकार</span>
                     </a>
                 </li>
 
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                    <a class="nav-link" href="tables.html">
-                        <span class="nav-link-text">प्रोफ़ाइल</span>
-                    </a>
-                </li>
 
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                    <a class="nav-link" href="tables.html">
+                    <a class="nav-link" href="#help">
                         <span class="nav-link-text">सहायता</span>
                     </a>
                 </li>
-                <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                    <a class="nav-link" href="tables.html">
-                        <span class="nav-link-text">सेटिंग्स और समर्थन</span>
-                    </a>
-                </li> -->
+                
             </ul>
             <ul class="navbar-nav sidenav-toggler">
                 <li class="nav-item">
@@ -210,7 +195,7 @@
             </ul>
         </div>
     </nav>
-    <div class="content-wrapper">
+    <div class="content-wrapper" id="newbooking">
 
         <!-- Breadcrumbs-->
         <ol class="breadcrumb" style="margin-left: 20px;">
@@ -257,7 +242,7 @@
 
                                
                                 <tr>
-                                    <td><%=result.email%></td>
+                                    <td><%=result.firstName%></td>
                                     <td><%=result.id%></td>
                                     <td><%=result.address%></td>
                                     <td><%=result.mobile%></td>
@@ -265,104 +250,15 @@
                                     <td><%=result.CreateDate%></td>
                                     <td>200</td>
                                     <td>
-
-                                        <!--[if lte IE 9]>
-                                        <style>
-                                            .path {stroke-dasharray: 0 !important;}
-                                        </style>
-                                        <![endif]-->
-
-                                        <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-                                            <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
-                                            <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
-                                        </svg> -->
-                                        <div id="check"><i class="bi bi-check-circle"></i></div>
-                                        <div id="reject"><i class="bi bi-x-circle"></i></div>
-
-                                        <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-                                            <circle class="path circle" fill="none" stroke="#D06079" stroke-width="6"
-                                                stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
-                                            <line class="path line" fill="none" stroke="#D06079" stroke-width="6"
-                                                stroke-linecap="round" stroke-miterlimit="10" x1="34.4" y1="37.9"
-                                                x2="95.8" y2="92.3" />
-                                            <line class="path line" fill="none" stroke="#D06079" stroke-width="6"
-                                                stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38"
-                                                x2="34.4" y2="92.2" />
-                                        </svg> -->
-
+                                            <a href="#" class="accept"><span class="fa fa-check"></span></a><br><br>
+                                            </td>
+                                            <td>        
+                                            <a href="#" class="deny"><span class="fa fa-close"></span></a>
+                                        
                                     </td>
                                 </tr>
                                 <% })%>
-                                <tr>
-                                    <td>मुकेश</td>
-                                    <td>23S100089</td>
-                                    <td>123 एल्म स्ट्रीटसिटीविले, XX 12345 जनकपुर</td>
-                                    <td>1276603456</td>
-                                    <td>वूडन फर्नीचर निर्माण</td>
-                                    <td>22/10/2023
-                                        13:00</td>
-                                    <td>500</td>
-                                    <td>
-
-                                        <!--[if lte IE 9]>
-                                        <style>
-                                            .path {stroke-dasharray: 0 !important;}
-                                        </style>
-                                        <![endif]-->
-
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-                                            <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6"
-                                                stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
-                                            <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6"
-                                                stroke-linecap="round" stroke-miterlimit="10"
-                                                points="100.2,40.2 51.5,88.8 29.8,67.5 " />
-                                        </svg>
-
-
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-                                            <circle class="path circle" fill="none" stroke="#D06079" stroke-width="6"
-                                                stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
-                                            <line class="path line" fill="none" stroke="#D06079" stroke-width="6"
-                                                stroke-linecap="round" stroke-miterlimit="10" x1="34.4" y1="37.9"
-                                                x2="95.8" y2="92.3" />
-                                            <line class="path line" fill="none" stroke="#D06079" stroke-width="6"
-                                                stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38"
-                                                x2="34.4" y2="92.2" />
-                                        </svg>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>तृप्ति रॉय</td>
-                                    <td>23S125005</td>
-                                    <td>123 एल्म स्ट्रीटसिटीविले, XX 12345 जनकपुर</td>
-                                    <td>1348003456</td>
-                                    <td>फ़्लोरिंग काम</td>
-                                    <td>02/11/2023
-                                        14:00</td>
-                                    <td>800</td>
-                                    <td>
-
-                                        <!--[if lte IE 9]>
-                                        <style>
-                                            .path {stroke-dasharray: 0 !important;}
-                                        </style>
-                                        <![endif]-->
-
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-                                            <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
-                                            <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
-                                        </svg>
-
-
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-                                            <circle class="path circle" fill="none" stroke="#D06079" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
-                                            <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3"/>
-                                            <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2"/>
-                                        </svg>
-  
-                                    </td>
-                                </tr>
+                                
                             </tbody>
                         </table>
                     </div>
@@ -387,7 +283,7 @@
                                 <th>काम</th>
                                 <th>तारीख</th>
                                 <th>तनख़्वाह</th>
-                                <th>                            </th>
+                            
                             </tr>
                         </thead>
                         <tfoot>
@@ -399,7 +295,7 @@
                                 <th>काम</th>
                                 <th>तारीख</th>
                                 <th>तनख़्वाह</th>
-                                <th>                            </th>
+                                
                             </tr>
                         </tfoot>
                         <tbody>
@@ -412,7 +308,9 @@
                                 <td>12/10/2023
                                     10:00</td>
                                 <td>200</td>
-                                <td>
+                                <!-- <td>
+                                    <div id="check"><i class="bi bi-check-circle"></i></div>
+                                        <div id="reject"><i class="bi bi-x-circle"></i></div> -->
                                     
                                     <!--[if lte IE 9]>
                                     <style>
@@ -420,7 +318,7 @@
                                     </style>
                                     <![endif]-->
 
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                                        <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
                                             <circle class="path circle" fill="none" stroke="#D06079" stroke-width="6"
                                                 stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
                                             <line class="path line" fill="none" stroke="#D06079" stroke-width="6"
@@ -429,9 +327,9 @@
                                             <line class="path line" fill="none" stroke="#D06079" stroke-width="6"
                                                 stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38"
                                                 x2="34.4" y2="92.2" />
-                                        </svg>
+                                        </svg> -->
 
-                                    </td>
+                                    <!-- </td> -->
                                 </tr>
                                 <tr>
                                     <td>रितु</td>
@@ -442,7 +340,9 @@
                                     <td>22/10/2023
                                         13:00</td>
                                     <td>500</td>
-                                    <td>
+                                    <!-- <td> -->
+                                        <!-- <div id="check"><i class="bi bi-check-circle"></i></div> -->
+                                        <!-- <div id="reject"><i class="bi bi-x-circle"></i></div> -->
 
                                         <!--[if lte IE 9]>
                                     <style>
@@ -450,7 +350,7 @@
                                     </style>
                                     <![endif]-->
 
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                                        <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
                                             <circle class="path circle" fill="none" stroke="#D06079" stroke-width="6"
                                                 stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
                                             <line class="path line" fill="none" stroke="#D06079" stroke-width="6"
@@ -459,9 +359,9 @@
                                             <line class="path line" fill="none" stroke="#D06079" stroke-width="6"
                                                 stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38"
                                                 x2="34.4" y2="92.2" />
-                                        </svg>
+                                        </svg> -->
 
-                                    </td>
+                                    <!-- </td> -->
                                 </tr>
                             </tbody>
                         </table>
@@ -472,7 +372,7 @@
 
 
             <!-- record table-->
-            <div class="card mb-3">
+            <div id="pastbooking" class="card mb-3">
                 <div class="card-header">
                     <i class="fa fa-table"></i> पिछली बुकिंग
                 </div>
@@ -551,8 +451,30 @@
                 <div class="card-footer small text-muted">अपडेट 11:59 </div>
             </div>
         </div>
+        
+        <div class="text-center" id="mvideo"><h2>श्रम अधिकार</h2>
+            <div class="col-lg-4" >
+                <div class="gallery">
+                  <div>
+                    <iframe src="https://www.youtube.com/embed/NcoKL_f3ngo?si=dfSoM6GVPyfttrv7" allowfullscreen frameborder="0" name="tab"></iframe>
+                  </div>
+                  <div>
+                    <span>
+                    <a href="https://www.youtube.com/embed/kePyliKqy0o?si=8ywSCP1XNak5bqfF" target="tab"><img src="//img.youtube.com/vi/1TYl3jhfEDA/default.jpg"></a>
+                    <a href="https://www.youtube.com/embed/gkEh5K9dkO0?si=wSlPr1Cg8rsMTEL0" target="tab"><img src="//img.youtube.com/vi/xFa2_PVMeDQ/default.jpg"></a>
+                    <a href="//www.youtube.com/embed/hSrOpTYKNMw?rel=0&autoplay=1" target="tab"><img src="//img.youtube.com/vi/hSrOpTYKNMw/default.jpg"></a>
+                    <a href="//www.youtube.com/embed/WFhzzJjRncI?rel=0&autoplay=1" target="tab"><img src="//img.youtube.com/vi/WFhzzJjRncI/default.jpg"></a>
+                  </span>
+                 </div>
+                </div>
+                </div></div>
+                
+<br>
+<hr>
+<div id="help">
+<%-include('../../partials/admin/footer.ejs')%>
     </div>
-
+</div>
 
 
     <!-- Breadcrumbs-->
@@ -599,6 +521,10 @@
         </div>
     </div>
     </div>
+
+
+    
+    <script src="https://kit.fontawesome.com/5fb47b5325.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
