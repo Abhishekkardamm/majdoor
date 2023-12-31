@@ -30,7 +30,7 @@ exports.mlogin = (req, res) => {
 }
 exports.mdashboard = async(req, res) => {
     const record=await re.find()
-   const username = req.session.username
+    const username = req.session.username
    
     res.render('majdoor/Majdoor_Dashbord.ejs',{record,username})
 }
@@ -99,16 +99,30 @@ exports.deletemajdoor=async(req,res)=>{
     res.render('confirmation_page.ejs',{record})
 }
 exports.majdoorprofile=async(req,res)=>{
+    const username=req.session.username
+    const record=await mjreg.findOne()
+    res.render('majdoor/majdoorprofile.ejs',{record,username})
 
-   const id=req.session.id
-   //console.log('Session:', req.session)
-   //console.log(id)
-   const record=await mjreg.find()
-   console.log(record)
-   res.render('majdoor/majdoorprofile.ejs',{record})
-   
 }  
+exports.updateform=async(req,res)=>{
+    const username=req.session.username
+    const record=await mjreg.findOne({username})
 
+    res.render('majdoor/majdoorupdateform.ejs',{record,username})
+}
+exports.updation=async(req,res)=>{
+    const { us, lname, gender, skills, location,add, mobile } = req.body
+    const id = req.session.userid
+    if (req.file) {
+        const filename = req.file.filename
+        await mjreg.findByIdAndUpdate(id, { username: us, lastName: lname, gender: gender, image: filename, skills: skills, location:location,address:add,phone_no:mobile })
+
+    } else {
+        await mjreg.findByIdAndUpdate(id, { username: us, lastname: lname, gender: gender, skills: skills,location:location, address: add, phone_no: mobile })
+    }
+    res.redirect('/majdoor/mprofileupdate')
+
+}
 exports.similiarmajdoor=async(req,res)=>{
     // const record= await mjreg.find({ skills: { $in: skills } });
 

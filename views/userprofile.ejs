@@ -12,7 +12,7 @@
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"> -->
 
-    <title>Document</title>
+    <title>Customer Dasboard</title>
 </head>
 <body>
            <!-- <%-include('../partials/admin/header.ejs')%> -->
@@ -41,7 +41,7 @@
            <header>
             <h1>MAJDOOR</h1>
             <div class="profile">
-                <i class="fas fa-user-alt"></i>
+                <a href="/customerdetails"><i class="fas fa-user-alt"></i></a>
                 <i class="fa fa-sign-out" aria-hidden="true"></i>
             </div>
     
@@ -49,7 +49,7 @@
     
         <div class="main">
             <div class="customer_name">
-                <h3>Welcome Govind,</h3>
+                <h3>Welcome <%=username%></h3>
                 
             </div>
             <div class="search-form">

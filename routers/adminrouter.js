@@ -14,7 +14,7 @@ function handlelogin(req,res,next){
 
 router.get('/dashboard',handlelogin,admincheck,regc.dashboard)
 router.get('/users',regc.adminusers)
-router.get('/statusupdate',regc.statusupdate)
+router.get('/statusupdate/:id',regc.statusupdate)
 router.get('/Md',m.md)
 router.get('/deletemajdoor/:id',m.deletemajdoor)
 

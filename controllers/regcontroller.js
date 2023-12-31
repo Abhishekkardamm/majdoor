@@ -73,11 +73,11 @@ exports.logincheck = async (req, res) => {
     try {
         const { us, pass } = req.body
         const record = await Reg.findOne({ email: us })
-        //console.log(record)
+        console.log(record)
         if (record != null) {
             const passwordcheck = await bcrypt.compare(pass, record.password)
             if (passwordcheck) {
-                req.session.username = us
+                req.session.username = record.email
                 req.session.userid = record.id
                 req.session.isAuth = true
                 req.session.role = record.role
@@ -131,7 +131,7 @@ exports.userprofiles = async (req, res) => {
     try {
         const username = req.session.username
         const record = await majdoorreg.find()
-        console.log(record)
+        // console.log(record)
         res.render('userprofile.ejs', { username, record })
     } catch (error) {
         console.log(error.message)
@@ -178,10 +178,24 @@ exports.statusupdate = async (req, res) => {
 }
 
 exports.contactdetails = async (req, res) => {
+    try {
+
     const id = req.params.id
     const record = await Reg.findById(id)
+    if (!user) {
+        // Handle case where user is not found
+        res.status(404).send('User not found');
+        return;
+     }
     res.render('contactdetails.ejs', { username: req.session.username, record })
+} catch (error) {
+    // Handle errors (e.g., database errors)
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+ }
 }
+
+
 
 exports.forgotform = (req, res) => {
     res.render('forgotform.ejs', { message: '' })
@@ -271,4 +285,9 @@ exports.confirmed=(req,res)=>{
 }
 exports.confirmedm=(req,res)=>{
     console.log(req.body)
+}
+exports.customerdetails=async(req,res)=>{
+    const username=req.session.username
+    const record=await Reg.findOne({email:username})
+    res.render('customerdetails.ejs',{record,username})
 }

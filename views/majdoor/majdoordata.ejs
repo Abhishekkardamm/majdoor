@@ -21,12 +21,16 @@
                     <th>Address</th>
                     <th>Phone Number</th>
                     <th>Feedback</th> -->
+                    <th>Skills</th>
+                    <th>Location</th>
                     <th>Delete</th>
                 </tr>
                <%record.forEach((result,key)=>{%>
                 <tr>
                     <td><%=key+1%></td>
                     <td><%=result.username%></td>
+                    <td><%=result.skills%></td>
+                    <td><%=result.location%></td>
                     <td><a href="/admin/deletemajdoor/<%=result.id%>">Delete</a></td>
                     
                 </tr>

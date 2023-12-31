@@ -8,18 +8,16 @@
 </head>
 
 <body>
-   
+    <%-include('../../partials/admin/majdoorupdate.ejs')%>
         <h1>Majdoor Profile</h1>
+        <h2>Majdoor Name:<%=username%></h2>
+        <p>LastName:<%=record.lastname%></p>
+        <p>Phone No:<%=record.phone_no%></p>
+        <p>Skills:<%=record.skills%></p>
+        <p>Location:<%=record.location%></p>
+        
 
-        <% if (record) { %>
-            <div>
-                <h2>Username: <%= record.username %></h2>
-                <h2>User ID: <%= record.id %></h2>
-                <!-- Add other profile details as needed -->
-            </div>
-        <% } else { %>
-            <p>Profile not found.</p>
-        <% } %>
+       
 
 
 </body>
