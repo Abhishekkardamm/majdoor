@@ -1,5 +1,6 @@
 const Reg = require('../models/reg')
 const majdoorreg=require('../models/majdoorreg')
+const coonf=require('../models/confirm')
 const nodemailer = require('nodemailer')
 const bcrypt = require('bcrypt')
 
@@ -285,6 +286,18 @@ exports.confirmed=(req,res)=>{
 }
 exports.confirmedm=(req,res)=>{
     console.log(req.body)
+
+
+    // const transporter = nodemailer.createTransport({
+    //     host: "smtp.forwardemail.net",
+    //     port: 465,
+    //     secure: true,
+    //     auth: {
+    //       // TODO: replace `user` and `pass` values from <https://forwardemail.net>
+    //       user: "REPLACE-WITH-YOUR-ALIAS@YOURDOMAIN.COM",
+    //       pass: "REPLACE-WITH-YOUR-GENERATED-PASSWORD",
+    //     },
+    //   });
 }
 exports.customerdetails=async(req,res)=>{
     const username=req.session.username

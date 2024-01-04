@@ -13,9 +13,7 @@
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
 </head>
 
 <body>
@@ -87,25 +85,31 @@
             </div>
 
             <hr>
-            <form id="formAwesome">
+            <form"formAwesome" method="POST" action="/smajdoor/658eb9aee9f2a918e9309200">
+                <div class="form-group row">
+                    <label for="firstName" class="col-sm-6 col-form-label">Email:</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="email" class="form-control" id="Street" placeholder="Email" required>
+                    </div>
+                </div>
                 <div class="form-group row">
                     <label for="firstName" class="col-sm-6 col-form-label">Street Number:</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="Street" placeholder="Street Number" required>
+                        <input type="text"  name="street" class="form-control" id="Street" placeholder="Street Number" required>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="Pin code " class="col-sm-6 col-form-label">Pin code </label>
                     <div class="col-sm-6">
-                        <input type="number" class="form-control" id="lastName" placeholder="Number" required>
+                        <input type="number"  name="pin"class="form-control" id="lastName" placeholder="Number" required>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="State " class="col-sm-6 col-form-label">State </label>
                     <div class="col-sm-6">
-                        <input type="email" class="form-control" id="State" placeholder=" State" required>
+                        <input type="text"  name="state" class="form-control" id="State" placeholder=" State" required>
                     </div>
                 </div>
 
@@ -124,7 +128,7 @@
                 <div class="form-group row">
                     <label for="Contact Number" class="col-sm-6 col-form-label">Contact Number </label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="occupation" placeholder="phone_number"
+                        <input type="text"  name="contact" class="form-control" id="occupation" placeholder="phone_number"
                             required>
                     </div>
                 </div>
@@ -145,9 +149,9 @@
 
         
         <div class="button-container text-center">
-            <a href=""><button type="submit" class="btn btn-mod btn-border btn-large animation-one">
-                <span>Request For Booking</span>
-            </button></a>
+            <button type="submit" class="btn btn-mod btn-border btn-large animation-one">
+                Request For Booking
+            </button>
             <a href="majdoor_profiles.html">
                 <button type="button" class="btn btn-mod btn-border btn-large animation-one">
                     <span>Discard</span>
@@ -161,7 +165,7 @@
             <br>
         </div>
 
-        <script>
+        <!-- <script>
             document.getElementById('formAwesome').addEventListener('submit', function (event) {
                 event.preventDefault();
 
@@ -182,13 +186,10 @@
                 this.reset();
                 alert('Form submitted successfully!');
             });
-        </script>
+        </script>-->
 
-        <!-- jQuery and Bootstrap Bundle JS -->
-        <script src="https://kit.fontawesome.com/5fb47b5325.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        
+       
 </body>
 
 </html>
