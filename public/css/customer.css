@@ -130,6 +130,22 @@ header .profile {
     border-radius: 4px;
 }
 
+.selected-labor {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.selected-labor-image {
+  max-width: 150px;
+  max-height: 150px;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.selected-labor-details {
+  flex-grow: 1;
+}
 
 /* Footer css */
 

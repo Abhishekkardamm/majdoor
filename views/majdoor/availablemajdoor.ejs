@@ -43,12 +43,15 @@
 
         <% record.forEach((result, key)=> { %>
             <div class="labor-card"
-                onclick="showLaborDetails('<%=result.username%>', '<%= result.phone_no %>','<%=result.skills%>','<%=result.location%>','<%=result.username%>')">
-                <img src="<%=result.image %>" alt="Labor <%= key + 1 %>">
+                onclick="showLaborDetails('<%=result.username%>', '<%= result.phone_no %>','<%=result.skills%>','<%=result.location%>','<%=result.image%>')">
+                <img src="<%=result.image %>" onerror="this.src='/images/default profile.jpg'" alt="Labor <%= key + 1 %>">
                 <!-- <h4>Labor <%= key + 1 %>
                 </h4> -->
                 <h3>
                     <%= result.username %>
+                    <br>
+                    <br>
+                    <%=result.skills %>
                 </h3>
             </div>
             <% }) %>
@@ -80,14 +83,16 @@
             }
         });
 
-        function showLaborDetails(username, phone_no,skills,location) {
+        function showLaborDetails(username, phone_no,skills,location, image) {
             const selectedLaborDiv = document.getElementById('selectedLabor');
             selectedLaborDiv.innerHTML = `
-                
-                    <h3>username : ${username}</h3> 
-                <p>Contact Number: ${phone_no}</p>
-                <p>Skills: ${skills}</p>
-                <p>Location: ${location}</p>
+            <img src="${image}" onerror="this.src='/images/default profile.jpg'" alt="${username}'s Image" class="selected-labor-image">
+                <div class="selected-labor-details">
+                    <h3>Username: ${username}</h3> 
+                    <p>Contact Number: ${phone_no}</p>
+                    <p>Skills: ${skills}</p>
+                    <p>Location: ${location}</p>
+                </div>
                 
             `;
             // Add gallery images dynamically (replace with actual image sources)

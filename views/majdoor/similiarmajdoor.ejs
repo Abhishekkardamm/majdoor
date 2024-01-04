@@ -4,14 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Similiar Majdoor</title>
+
+    <link rel="stylesheet" href="/css/availablem.css">
+    <!-- //icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
-    <%record.forEach((result)=>{%>
+    <header>
+        <h1>MAJDOOR</h1>
+        <div class="profile">
+            <i class="fas fa-user-alt"></i>
+            <i class="fa fa-sign-out" ></i>
+
+        </div>
+
+    </header>
+
+    <div class="main">
+        <div class="details">
+            <h2>Labour's Details</h2>
+            <div class="selected-labor" id="selectedLabor">
+                <!-- Display selected labor details here -->
+            </div>
+            <a href="confirmation_page.html">
+                <button class="hire-button">Hire</button>
+            </a>
+        </div>
+
+        <div class="labors-list" id="laborsList">
+            <h2>Available Labours</h2>
+    
+        <% record.forEach((result)=> { %>
+            <div class="labor-card"
+                onclick="showLaborDetails('<%=result.username%>', '<%= result.phone_no %>','<%=result.skills%>','<%=result.location%>','<%=result.image%>')">
+                <img src="<%=result.image %>" onerror="this.src='/images/default profile.jpg'" >
+                <h3>
+                    <%= result.username %> 
+                    <br>
+                    <br>
+                    <%=result.skills %>
+                </h3>
+            </div>
+            <% }) %>
+
+        </div>
+        </div>
+    <!-- <%record.forEach((result)=>{%>
         <h2>Majdoor Name:<%=result.username%></h2>
         <h4>Phone_no:<%=result.phone_no%></h4>
         <h4>Skills:<%=result.skills%></h4>
         <h4>Location:<%=result.location%></h4>
 
-   <%})%>
+   <%})%> -->
+
+   <script src="https://kit.fontawesome.com/5fb47b5325.js" crossorigin="anonymous"> </script>
+
+        <script>
+        function showLaborDetails(username, phone_no,skills,location,image) {
+            const selectedLaborDiv = document.getElementById('selectedLabor');
+            selectedLaborDiv.innerHTML = `
+            <img src="${image}" onerror="this.src='/images/default profile.jpg'" alt="${username}'s Image" class="selected-labor-image">
+                <div class="selected-labor-details">
+                    <h3>Username: ${username}</h3> 
+                    <p>Contact Number: ${phone_no}</p>
+                    <p>Skills: ${skills}</p>
+                    <p>Location: ${location}</p>
+                </div>
+            `;
+            // Add gallery images dynamically (replace with actual image sources)
+            const laborGalleryDiv = document.getElementById('laborGallery');
+            laborGalleryDiv.innerHTML = `
+                <h4>Gallery</h4>
+                <img src="gallery1.jpg" alt="Gallery 1">
+                <img src="gallery2.jpg" alt="Gallery 2">
+                <!-- Add more gallery images as needed -->
+            `;
+        }
+
+        function hireLabor() {
+            // Add logic to handle hiring action
+            alert('Hiring labor...');
+        }
+
+        function openUserProfile() {
+            // Add logic to open the user profile page
+            alert('Opening user profile...');
+        }
+
+   </script>
+
 </body>
 </html>

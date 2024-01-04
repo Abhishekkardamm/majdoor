@@ -107,7 +107,7 @@ header .profile {
 }
 
 .hire-button {
-    background-color: #4caf50;
+    background-color: #343A40;
     color: #fff;
     padding: 10px 20px;
     font-size: 16px;
@@ -118,5 +118,7 @@ header .profile {
 }
 
 .hire-button:hover {
-    background-color: #45a049;
+    background-color: #fff;
+    color: #343A40;
+    border-color: #343A40;
 }
