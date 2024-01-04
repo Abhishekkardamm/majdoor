@@ -1,14 +1,50 @@
-<section id="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4"><h5>Welcome <%=username%></h5></div>
-            <div class="col-md-8"><a href="/logout"><button class="btn btn-danger">Logout</button></a>
-                <a href="/profileupdate"><button class="btn btn-success me-2">Profile Update</button></a>
-                <a href="/profiles"><button class="btn btn-success me-2">ALL Profiles</button></a>
-                <%if(username=='srai88723@gmail.com'){%>
-                <a href="/admin/Md"><button class="btn btn-success me-2"> Majdoor Details</button></a>
-                <%}%>
+<header class="bg-nav">
+    <div class="flex justify-between">
+        <div class="p-1 mx-3 inline-flex items-center">
+            <i class="fas fa-bars pr-2 text-white" onclick="sidebarToggle()"></i>
+            <h1 class="text-white p-2">Welcome <%=username%> to Admin panel</h1>
+        </div>
+        <div class="p-1 flex flex-row items-center">
+            <a href="/admin/Md" class="text-white p-2 mr-2 no-underline hidden md:block lg:block">Majdoor Dashbord</a>
+
+            <a href="/admin/users" class="text-white p-2 mr-2 no-underline hidden md:block lg:block">Customer Dashbord</a>
+
+
+            <img onclick="profileToggle()" class="inline-block h-8 w-8 rounded-full" src="/images/worker_icon.jpg" alt="">
+            <a href="#" onclick="profileToggle()" class="text-white p-2 no-underline hidden md:block lg:block"><%=username%></a>
+            <div id="ProfileDropDown" class="rounded hidden shadow-md bg-white absolute pin-t mt-12 mr-1 pin-r">
+                <ul class="list-reset">
+                  <li><a href="#" class="no-underline px-4 py-2 block text-black hover:bg-grey-light">My account</a></li>
+                  <li><a href="#" class="no-underline px-4 py-2 block text-black hover:bg-grey-light">Notifications</a></li>
+                  <li><hr class="border-t mx-2 border-grey-ligght"></li>
+                  <li><a href="/logout" class="no-underline px-4 py-2 block text-black hover:bg-grey-light">Logout</a></li>
+                </ul>
             </div>
         </div>
     </div>
-</section>
+</header>
+
+
+
+
+
+
+<!-- <section id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Welcome <%=username%>
+                </h5>
+            </div>
+            <div class="col-md-8"><a href="/logout"><button class="btn btn-danger">Logout</button></a>
+                <a href="/admin/Md"><button class="btn btn-success me-2"> Majdoor Dashbord</button></a>
+                <a href="/admin/Md"><button class="btn btn-success me-2"> Customer Dashbord</button></a> -->
+                <!-- <a href="/profileupdate"><button class="btn btn-success me-2">Profile Update</button></a> -->
+                <!-- <a href="/profiles"><button class="btn btn-success me-2">ALL Profiles</button></a> -->
+                <!-- <%if(username=='srai88723@gmail.com'){%>
+                    <a href="/admin/Md"><button class="btn btn-success me-2"> Majdoor Details</button></a>
+                    <%}%>
+            </div>
+        </div>
+    </div>
+</section> -->

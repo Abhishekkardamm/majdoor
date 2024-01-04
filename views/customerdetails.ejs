@@ -4,16 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer DetailsS</title>
+    <link rel="stylesheet" href="/admin/css/style.css">
+    <link rel="stylesheet" href="/admin/css/all.css">
 </head>
 <body>
     
     <%-include('../partials/admin/header.ejs')%>
-    <h2><%=username%>Body</h2>
-   
-    <p>First Name:<%=record.firstName%></p>
-    <p>LastName:<%=record.LastName%></p>
-    <p>Addres:<%=record.address%></p>
-    <p>Mobile:<%=record.mobile%></p>
+
     
+    <h2 class="text-center">welcome <%=username%> to profile page </h2>
+    <div class="table-responsive mx-auto">
+
+        <table class="table">
+
+            <tbody>
+                <!-- <div class="container text-center">
+                    <h4>Majdor Detail's </h4>
+                </div> -->
+                <tr>
+                    <td style="width: 20%;">
+                        <!-- User Image -->
+                        <img src="/images/carpenter-svgrepo-com.svg" alt="User Image"
+                            class="img-fluid rounded-circle" style="max-width: 100%;">
+                    </td>
+                    <td>
+                        <!-- User Details Table -->
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>First Name:</th>
+                                    <td><%=record.firstName%></td>
+                                </tr>
+                                <tr>
+                                    <th>Last Name:</th>
+                                    <td><%=record.LastName%></td>
+                                </tr>
+                                <tr>
+                                    <th>Address:</th>
+                                    <td><%=record.address%></td>
+                                </tr>
+                                <tr>
+                                    <th>Mobile:</th>
+                                    <td><%=record.mobile%></td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+            
+        </table>
+      
+    </div>
 </body>
 </html>

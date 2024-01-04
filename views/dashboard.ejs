@@ -1,28 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Admin panel</title>
+    <meta name="keywords" content="tailwind,tailwindcss,tailwind css,css,starter template,free template,admin templates, admin template, admin dashboard, free tailwind templates, tailwind example">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/admin/css/style.css">
-</head>
+    <link rel="stylesheet" href="/admin/css/all.css">
 
+
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <!-- Css -->
+    <!-- <link rel="stylesheet" href="./dist/styles.css"> -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i" rel="stylesheet">
+
+</head>
 <body>
     <%-include('../partials/admin/header.ejs')%>
-        <section id="mid">
-            <div class="container">
-                <div class="row">
-                    <%-include('../partials/admin/left.ejs')%>
-                        
+    
+                <%-include('../partials/admin/left.ejs')%>
+
+                   <!--Main-->
+            <main class="bg-white-300 flex-1 p-3 overflow-hidden">
+
+                <div class="flex flex-col">
+                    <!-- Stats Row Starts Here -->
+                    <div class="flex flex-1 flex-col md:flex-row lg:flex-row mx-2">
+                        <div class="shadow-lg bg-red-vibrant border-l-8 hover:bg-red-vibrant-dark border-red-vibrant-dark mb-2 p-2 md:w-1/4 mx-2">
+                            <div class="p-4 flex flex-col">
+                                <a href="#" class="no-underline text-white text-2xl">
+                                    244
+                                </a>
+                                <a href="#" class="no-underline text-white text-lg">
+                                    Total majdoors
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="shadow bg-info border-l-8 hover:bg-info-dark border-info-dark mb-2 p-2 md:w-1/4 mx-2">
+                            <div class="p-4 flex flex-col">
+                                <a href="#" class="no-underline text-white text-2xl">
+                                    199
+                                </a>
+                                <a href="#" class="no-underline text-white text-lg">
+                                    Total Customers
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- <div class="shadow bg-warning border-l-8 hover:bg-warning-dark border-warning-dark mb-2 p-2 md:w-1/4 mx-2">
+                            <div class="p-4 flex flex-col">
+                                <a href="#" class="no-underline text-white text-2xl">
+                                    900
+                                </a>
+                                <a href="#" class="no-underline text-white text-lg">
+                                    Total Users
+                                </a>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="shadow bg-success border-l-8 hover:bg-success-dark border-success-dark mb-2 p-2 md:w-1/4 mx-2">
+                            <div class="p-4 flex flex-col">
+                                <a href="#" class="no-underline text-white text-2xl">
+                                    500
+                                </a>
+                                <a href="#" class="no-underline text-white text-lg">
+                                    Total Majdoori
+                                </a>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <!-- /Stats Row Ends Here -->
+
+
+
+
+                     <!-- Card Sextion Starts Here -->
+                     <div class="flex flex-1 flex-col md:flex-row lg:flex-row mx-2">
+
+                        <!-- card -->
+
+                        <div class="rounded overflow-hidden shadow bg-white mx-2 w-full">
+                            <div class="px-6 py-2 border-b border-light-grey">
+                                <div class="font-bold text-xl">Trending Majdoors Profile</div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table text-grey-darkest">
+                                    <thead class="bg-grey-dark text-white text-normal">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Current</th>
+                                        <th scope="col">Change</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>
+                                            <button class="bg-blue-500 hover:bg-blue-800 text-white font-light py-1 px-2 rounded-full">
+                                                Twitter
+                                            </button>
+                                        </td>
+                                        <td>4500</td>
+                                        <td>4600</td>
+                                        <td>
+                                            <span class="text-green-500"><i class="fas fa-arrow-up"></i>5%</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>
+                                            <button class="bg-primary hover:bg-primary-dark text-white font-light py-1 px-2 rounded-full">
+                                                Facebook
+                                            </button>
+                                        </td>
+                                        <td>10000</td>
+                                        <td>3000</td>
+                                        <td>
+                                            <span class="text-red-500"><i class="fas fa-arrow-down"></i>65%</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>
+                                            <button class="bg-success hover:bg-success-dark text-white font-light py-1 px-2 rounded-full">
+                                                Amazon
+                                            </button>
+                                        </td>
+                                        <td>10000</td>
+                                        <td>3000</td>
+                                        <td>
+                                            <span class="text-red-500"><i class="fas fa-arrow-down"></i>65%</span>
+                                        </td>
+                                    </tr>
+
+                                    <!-- <tr>
+                                        <th scope="row">4</th>
+                                        <td>
+                                            <button class="bg-blue-500 hover:bg-blue-800 text-white font-light py-1 px-2 rounded-full">
+                                                Microsoft
+                                            </button>
+                                        </td>
+                                        <td>10000</td>
+                                        <td>3000</td>
+                                        <td>
+                                            <span class="text-green-500"><i class="fas fa-arrow-up"></i>65%</span>
+                                        </td>
+                                    </tr> -->
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /card -->
+
+                    </div>
+                    <!-- /Cards Section Ends Here -->
+
+
+                     <!-- Card Sextion Starts Here -->
+                     <div class="flex flex-1 flex-col md:flex-row lg:flex-row mx-2">
+
+                        <!-- card -->
+
+                        <div class="rounded overflow-hidden shadow bg-white mx-2 w-full">
+                            <div class="px-6 py-2 border-b border-light-grey">
+                                <div class="font-bold text-xl">Trending Customers Profile</div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table text-grey-darkest">
+                                    <thead class="bg-grey-dark text-white text-normal">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Current</th>
+                                        <th scope="col">Change</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>
+                                            <button class="bg-blue-500 hover:bg-blue-800 text-white font-light py-1 px-2 rounded-full">
+                                                Twitter
+                                            </button>
+                                        </td>
+                                        <td>4500</td>
+                                        <td>4600</td>
+                                        <td>
+                                            <span class="text-green-500"><i class="fas fa-arrow-up"></i>5%</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>
+                                            <button class="bg-primary hover:bg-primary-dark text-white font-light py-1 px-2 rounded-full">
+                                                Facebook
+                                            </button>
+                                        </td>
+                                        <td>10000</td>
+                                        <td>3000</td>
+                                        <td>
+                                            <span class="text-red-500"><i class="fas fa-arrow-down"></i>65%</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>
+                                            <button class="bg-success hover:bg-success-dark text-white font-light py-1 px-2 rounded-full">
+                                                Amazon
+                                            </button>
+                                        </td>
+                                        <td>10000</td>
+                                        <td>3000</td>
+                                        <td>
+                                            <span class="text-red-500"><i class="fas fa-arrow-down"></i>65%</span>
+                                        </td>
+                                    </tr>
+
+                                    <!-- <tr>
+                                        <th scope="row">4</th>
+                                        <td>
+                                            <button class="bg-blue-500 hover:bg-blue-800 text-white font-light py-1 px-2 rounded-full">
+                                                Microsoft
+                                            </button>
+                                        </td>
+                                        <td>10000</td>
+                                        <td>3000</td>
+                                        <td>
+                                            <span class="text-green-500"><i class="fas fa-arrow-up"></i>65%</span>
+                                        </td>
+                                    </tr> -->
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /card -->
+
+                    </div>
+                    <!-- /Cards Section Ends Here -->
+
+
+
+
+
+             <!-- Progress Bar -->
+             <div class="flex flex-1 flex-col md:flex-row lg:flex-row mx-2 mt-2">
+                <div class="rounded overflow-hidden shadow bg-white mx-2 w-full pt-2">
+                    <div class="px-6 py-2 border-b border-light-grey">
+                        <div class="font-bold text-xl">Progress Among Projects</div>
+                    </div>
+                    <div class="">
+                        <div class="w-full">
+
+                            <div class="shadow w-full bg-grey-light">
+                                <div class="bg-blue-500 text-xs leading-none py-1 text-center text-white"
+                                     style="width: 45%">45%
+                                </div>
+                            </div>
+
+
+                            <div class="shadow w-full bg-grey-light mt-2">
+                                <div class="bg-teal-500 text-xs leading-none py-1 text-center text-white"
+                                     style="width: 55%">55%
+                                </div>
+                            </div>
+
+
+                            <div class="shadow w-full bg-grey-light mt-2">
+                                <div class="bg-orange-500 text-xs leading-none py-1 text-center text-white"
+                                     style="width: 65%">65%
+                                </div>
+                            </div>
+
+
+                            <div class="shadow w-full bg-grey-300 mt-2">
+                                <div class="bg-red-800 text-xs leading-none py-1 text-center text-white"
+                                     style="width: 75%">75%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </div>        
+<!-- End here  -->
 
-        <%-include('../partials/admin/footer.ejs')%>
+ <!--/Profile Tabs-->
 
+ <div
+ class="mb-2 md:mx-2 lg:mx-2 border-solid border-gray-200 rounded border shadow-sm ">
+ <div class="bg-gray-200 px-2 py-3 border-solid border-gray-200 border-b">
+     Colored Table
+ </div>
+ <div class="p-3">
+     <table class="table-fixed">
+         <thead>
+             <tr>
+                 <th class="border-b bg-black text-white w-1/2 px-4 py-2">Title</th>
+                 <th class="border-b bg-black text-white w-1/4 px-4 py-2">Author</th>
+                 <th class="border-b bg-black text-white w-1/4 px-4 py-2">Views</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td class="border-b bg-blue-400 text-white px-4 py-2">Intro to CSS
+                 </td>
+                 <td class="border-b bg-blue-400 text-white px-4 py-2">Adam</td>
+                 <td class="border-b bg-blue-400 text-white px-4 py-2">858</td>
+             </tr>
+             <tr class="bg-gray-100">
+                 <td class="border-b bg-green-400 text-white px-4 py-2">A Long and
+                     Winding Tour of the History of UI Frameworks and Tools and the
+                     Impact on Design</td>
+                 <td class="border-b bg-green-400 text-white px-4 py-2">Adam</td>
+                 <td class="border-b bg-green-400 text-white px-4 py-2">112</td>
+             </tr>
+             <tr>
+                 <td class="border-b bg-red-500 text-white px-4 py-2">Into to
+                     JavaScript</td>
+                 <td class="border-b bg-red-500 text-white px-4 py-2">Chris</td>
+                 <td class="border-b bg-red-500 text-white px-4 py-2">1,280</td>
+             </tr>
+         </tbody>
+     </table>
+ </div>
+</div>
+
+          
+            
+    
+    <%-include('../partials/admin/footer.ejs')%>
+    <script src="https://kit.fontawesome.com/5fb47b5325.js" crossorigin="anonymous"></script> 
+
+    <script>var sidebar = document.getElementById('sidebar');
+
+        function sidebarToggle() {
+            if (sidebar.style.display === "none") {
+                sidebar.style.display = "block";
+            } else {
+                sidebar.style.display = "none";
+            }
+        }
+        
+        var profileDropdown = document.getElementById('ProfileDropDown');
+        
+        function profileToggle() {
+            if (profileDropdown.style.display === "none") {
+                profileDropdown.style.display = "block";
+            } else {
+                profileDropdown.style.display = "none";
+            }
+        }
+        
+        
+        /**
+         * ### Modals ###
+         */
+        
+        function toggleModal(action, elem_trigger)
+        {
+            elem_trigger.addEventListener('click', function () {
+                if (action == 'add') {
+                    let modal_id = this.dataset.modal;
+                    document.getElementById(`${modal_id}`).classList.add('modal-is-open');
+                } else {
+                    // Automaticlly get the opned modal ID
+                    let modal_id = elem_trigger.closest('.modal-wrapper').getAttribute('id');
+                    document.getElementById(`${modal_id}`).classList.remove('modal-is-open');
+                }
+            });
+        }
+        
+        
+        // Check if there is modals on the page
+        if (document.querySelector('.modal-wrapper'))
+        {
+            // Open the modal
+            document.querySelectorAll('.modal-trigger').forEach(btn => {
+                toggleModal('add', btn);
+            });
+            
+            // close the modal
+            document.querySelectorAll('.close-modal').forEach(btn => {
+                toggleModal('remove', btn);
+            });
+        }
+        </script>
 </body>
-
 </html>
