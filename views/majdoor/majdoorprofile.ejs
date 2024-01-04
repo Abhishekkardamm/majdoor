@@ -5,20 +5,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Majdoor Profile</title>
+    <link rel="stylesheet" href="/css/confirmation_page.css">
+
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 
 <body>
-    <%-include('../../partials/admin/majdoorupdate.ejs')%>
-        <h1>Majdoor Profile</h1>
-        <h2>Majdoor Name:<%=username%></h2>
-        <p>LastName:<%=record.lastname%></p>
-        <p>Phone No:<%=record.phone_no%></p>
-        <p>Skills:<%=record.skills%></p>
-        <p>Location:<%=record.location%></p>
+
+    
+
+    <br><br>
+    <div class="container main">
+        <div class="hire-details">
+            <h2 class="text-center">welcome <%=username%> to profile page </h2>
+
+
+
+            <div class="table-responsive mx-auto">
+
+                <table class="table">
+
+                    <tbody>
+                        <!-- <div class="container text-center">
+                            <h4>Majdor Detail's </h4>
+                        </div> -->
+                        <tr>
+                            <td style="width: 20%;">
+                                <!-- User Image -->
+                                <img src="/images/carpenter-svgrepo-com.svg" alt="User Image"
+                                    class="img-fluid rounded-circle" style="max-width: 100%;">
+                            </td>
+                            <td>
+                                <!-- User Details Table -->
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th>Majdoor Name:</th>
+                                            <td>
+                                                <%=username%>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>LastName:</th>
+                                            <td>
+                                                <%=record.lastname%>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Phone Number</th>
+                                            <td>
+                                               <%=record.phone_no%>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Skills:</th>
+                                            <td>
+                                                <%=record.skills%>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Location</th>
+                                            <td>
+                                                <%=record.location%>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+              <div class="container items-center text-center">  <%-include('../../partials/admin/majdoorupdate.ejs')%></div>
+            </div>
+
+            <hr>
+           
+
+            <br>
+            <br>
+        </div>
+
+   
         
 
        
-
+   
+    <br><br><br>
 
 </body>
 

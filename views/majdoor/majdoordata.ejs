@@ -3,12 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Majdoor Data</title>
+    <title>Admin Majdoor Data</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/mstyle.css">    
+        <meta name="keywords" content="tailwind,tailwindcss,tailwind css,css,starter template,free template,admin templates, admin template, admin dashboard, free tailwind templates, tailwind example">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+        <link rel="stylesheet" href="/admin/css/style.css">
+        <link rel="stylesheet" href="/admin/css/all.css">  
+   
+    
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i" rel="stylesheet">
+   
+
 </head>
 <body>
+
+  
+ <!-- Card Sextion Starts Here -->
+ 
+ <!--Grid Form-->
+
+ <div class="mb-2 border-solid border-gray-300 rounded border shadow-sm w-full">
+    <div class="bg-gray-200 px-2 py-3 border-solid border-gray-200 border-b">
+        Majdoor
+    </div>
+    <div class="p-3">
+        <table class="table-responsive w-full rounded">
+            <thead>
+              <tr>
+                <th class="border w-1/4 px-4 py-2">Serial No</th>
+                <th class="border w-1/6 px-4 py-2">Name</th>
+                <th class="border w-1/6 px-4 py-2">Skills</th>
+                <th class="border w-1/6 px-4 py-2">Location</th>
+                <th class="border w-1/7 px-4 py-2">User Status</th>
+                <th class="border w-1/5 px-4 py-2">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+                <%record.forEach((result,key)=>{%>
+                    <tr>
+                        <td><%=key+1%></td>
+                        <td><%=result.username%></td>
+                        <td><%=result.skills%></td>
+                        <td><%=result.location%></td>
+                      
+                        <td class="border px-4 py-2">
+                            <% if (result.status === 'active') { %>
+                                <button><i class="fas fa-check text-green-500"></i></button>
+                            <% } else { %>
+                                <button><i class="fas fa-times text-red-500"></i></button>
+                            <% } %>
+                        </td>
+                        <td class="border px-4 py-2">
+                            <a class="bg-teal-300 cursor-pointer rounded p-1 mx-1 text-white">
+                                    <i class="fas fa-eye"></i></a>
+                            <a class="bg-teal-300 cursor-pointer rounded p-1 mx-1 text-white">
+                                    <i class="fas fa-edit"></i></a>
+                            <a href="/admin/deletemajdoor/<%=result.id%>" class="bg-teal-300 cursor-pointer rounded p-1 mx-1 text-red-500">
+                                    <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                <%})%>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+<!--/Grid Form--> 
+    
+ 
     <section id="mddata">
    <div class="container">
     <div class="row">
@@ -36,10 +102,69 @@
                 </tr>
 
                <%})%>
+
+               
             </table>
         </div>
     </div>
    </div>
 </section>
+
+<script src="https://kit.fontawesome.com/5fb47b5325.js" crossorigin="anonymous"></script> 
+
+    <script>var sidebar = document.getElementById('sidebar');
+
+        function sidebarToggle() {
+            if (sidebar.style.display === "none") {
+                sidebar.style.display = "block";
+            } else {
+                sidebar.style.display = "none";
+            }
+        }
+        
+        var profileDropdown = document.getElementById('ProfileDropDown');
+        
+        function profileToggle() {
+            if (profileDropdown.style.display === "none") {
+                profileDropdown.style.display = "block";
+            } else {
+                profileDropdown.style.display = "none";
+            }
+        }
+        
+        
+        /**
+         * ### Modals ###
+         */
+        
+        function toggleModal(action, elem_trigger)
+        {
+            elem_trigger.addEventListener('click', function () {
+                if (action == 'add') {
+                    let modal_id = this.dataset.modal;
+                    document.getElementById(`${modal_id}`).classList.add('modal-is-open');
+                } else {
+                    // Automaticlly get the opned modal ID
+                    let modal_id = elem_trigger.closest('.modal-wrapper').getAttribute('id');
+                    document.getElementById(`${modal_id}`).classList.remove('modal-is-open');
+                }
+            });
+        }
+        
+        
+        // Check if there is modals on the page
+        if (document.querySelector('.modal-wrapper'))
+        {
+            // Open the modal
+            document.querySelectorAll('.modal-trigger').forEach(btn => {
+                toggleModal('add', btn);
+            });
+            
+            // close the modal
+            document.querySelectorAll('.close-modal').forEach(btn => {
+                toggleModal('remove', btn);
+            });
+        }
+        </script>
 </body>
 </html>
