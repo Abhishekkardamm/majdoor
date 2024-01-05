@@ -17,6 +17,7 @@ router.get('/users',regc.adminusers)
 router.get('/statusupdate/:id',regc.statusupdate)
 router.get('/Md',m.md)
 router.get('/deletemajdoor/:id',m.deletemajdoor)
+router.get('/deletecustomer/:id',regc.deletecustomer)
 
 // router.get('/mdetails',m.mdetails)
 
