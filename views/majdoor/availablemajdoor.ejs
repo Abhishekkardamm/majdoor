@@ -19,9 +19,8 @@
     <header>
         <h1>MAJDOOR</h1>
         <div class="profile">
-            <i class="fas fa-user-alt"></i>
-            <i class="fa fa-sign-out" ></i>
-
+            <a href="/customerdetails"><i class="fas fa-user-alt"></i></a>
+            <a href="/profiles"><i class="fa fa-sign-out" ></i></a>
         </div>
 
     </header>
@@ -55,15 +54,7 @@
                 </h3>
             </div>
             <% }) %>
-                <!-- <div class="labor-card" onclick="showLaborDetails('Labor 2', 'labor2.jpg', 4.0, ['Service C', 'Service D'], '$25/hour', 40, 10, '987-654-3210')">
-                <img src="labor2.jpg" alt="Labor 2">
-                <h4>Labor 2</h4>
-            </div>
-            <div class="labor-card" onclick="showLaborDetails('Labor 3', 'labor3.jpg', 3.0, ['Service A', 'Service D'], '$20/hour', 20, 13, '987-654-1210')">
-                <img src="labor3.jpg" alt="Labor 3">
-                <h4>Labor 3</h4>
-            </div> -->
-                <!-- Add more labor cards as needed -->
+                
     </div>
     </div>
 
@@ -86,7 +77,7 @@
         function showLaborDetails(username, phone_no,skills,location, image) {
             const selectedLaborDiv = document.getElementById('selectedLabor');
             selectedLaborDiv.innerHTML = `
-            <img src="${image}" onerror="this.src='/images/default profile.jpg'" alt="${username}'s Image" class="selected-labor-image">
+            <img src="${image}" onerror="this.src='/images/majdoor_profile.png'" alt="${username}'s Image" class="selected-labor-image">
                 <div class="selected-labor-details">
                     <h3>Username: ${username}</h3> 
                     <p>Contact Number: ${phone_no}</p>
