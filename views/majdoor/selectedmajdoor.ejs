@@ -6,25 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selected Majdoort</title>
     <link rel="stylesheet" href="/css/selectedm.css">
+    <link rel="stylesheet" href="/css/availablem.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 
 <body>
+    <header>
+        <h1>MAJDOOR</h1>
+        <div class="profile">
+            <a href="/customerdetails"><i class="fas fa-user-alt"></i></a>
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+        </div>
+
+    </header>
+
     <div class="container">
 
-
+        
         <%record.forEach((item,key)=>{%>
             <div class="card">
                 <h2 class="majdoorname">
-                    MajdoorName:<%=item.username%>
+                    Majdoor Name: <%=item.username%>
                 </h2>
                 <p class="skill">
-                    MajdoorSkill: <%=item.skills%>
+                    Skill: <%=item.skills%>
                 </p>
                 <p class="location">
-                    Majdoor Location:<%=item.location%>
+                    Location: <%=item.location%>
                 </p>
                 <p class="phone_no">
-                    Majdoor Phone_No:<%=item.phone_no%>
+                    Contact No.: <%=item.phone_no%>
                 </p>
 
 
@@ -69,14 +82,7 @@
         </form>
     </div>
 
-    <script>
-        
-        
-            $(".hire-button").click(function () {
-                $("body").toggleClass("main");
-            });
-        
-    </script>
+    <script src="https://kit.fontawesome.com/5fb47b5325.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
