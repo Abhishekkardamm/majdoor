@@ -15,7 +15,7 @@
         <h1>MAJDOOR</h1>
         <div class="profile">
             <a href="/customerdetails"><i class="fas fa-user-alt"></i></a>
-            <i class="fa fa-sign-out" ></i>
+            <a href="/profiles"><i class="fa fa-sign-out" ></i></a>
 
         </div>
 
@@ -64,7 +64,7 @@
         function showLaborDetails(username, phone_no,skills,location,image) {
             const selectedLaborDiv = document.getElementById('selectedLabor');
             selectedLaborDiv.innerHTML = `
-            <img src="${image}" onerror="this.src='/images/default profile.jpg'" alt="${username}'s Image" class="selected-labor-image">
+            <img src="${image}" onerror="this.src='/images/majdoor_profile.png'" alt="${username}'s Image" class="selected-labor-image">
                 <div class="selected-labor-details">
                     <h3>Username: ${username}</h3> 
                     <p>Contact Number: ${phone_no}</p>
