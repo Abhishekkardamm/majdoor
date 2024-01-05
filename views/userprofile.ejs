@@ -107,7 +107,7 @@
 
 <% uniqueSkills.forEach(skill => { %>
   <div class="service-card">
-    <img src="/upload/default-img.jpg" alt="<%= skill %> Icon">
+    <img src="/upload/default-img.jpg" onerror="this.src='/images/<%= skill %>_icon.png'" alt="<%= skill %> Icon">
     <h4><%= skill %></h4>
     <a href="/similiarmajdoor/<%= skill %>"><button>Explore</button></a>
   </div>
