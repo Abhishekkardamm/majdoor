@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="/admin/css/all.css">
 </head>
 <body>
-    
     <%-include('../partials/admin/header.ejs')%>
+    
+    <%-include('../partials/admin/left.ejs')%>
+   
 
     
     <h2 class="text-center">welcome <%=username%> to profile page </h2>
@@ -53,6 +55,17 @@
                     </td>
                 </tr>
             </tbody>
+            <section id="header">
+                <div class="container">
+                    <!-- <div class="col-md-4">
+                        <h5>Welcome <%=username%></h5>
+                    </div> -->
+                    <div class="col-md-8">
+                        <a href="/logout"><button class="btn btn-danger">Logout</button></a>
+                        <a href="/profileupdate"><button class="btn btn-success me-2">Profile Update</button></a>
+                    </div>
+                </div>
+            </section>
             
         </table>
       

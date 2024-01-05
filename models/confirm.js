@@ -14,11 +14,11 @@ const conSchema=mongoose.Schema({
     status:{type:String,default:'suspended'},
     img:{type:String,default:'default.png'},
     desc:String,
-    mobile:Number,
+    contact:Number,
     address:String,
     role:{type:String,default:'Public'}
 })
 
 
 
-module.exports=mongoose.model('confirmation',conSchema)
+module.exports=mongoose.model('conf',conSchema)

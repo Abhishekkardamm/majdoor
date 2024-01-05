@@ -21,7 +21,9 @@
                         <% } %>
                         <%= username %>'s Update here
                       </h2>
-                    <form action="" method="post">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <label for="">Profile Image</label>
+                        <input type="file" name="img" id="" class="form-control">
                         <label for="">Username</label>
                         <input type="text" name="" id="" class="form-control" value="<%=record.username%>">
                         <label for="">LastName</label>
