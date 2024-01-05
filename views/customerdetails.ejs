@@ -4,71 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer DetailsS</title>
-    <link rel="stylesheet" href="/admin/css/style.css">
-    <link rel="stylesheet" href="/admin/css/all.css">
+    <link rel="stylesheet" href="/css/profileupdate_cust.css">
+    <!-- <link rel="stylesheet" href="/admin/css/all.css"> -->
+    <!-- <link rel="stylesheet" href="/css/customer.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
-    <%-include('../partials/admin/header.ejs')%>
+    <header class="customer_header">
+        <h1>MAJDOOR</h1>
+        <div class="profile">
+            <a href="/customerdetails"><i class="fas fa-user-alt"></i></a>
+            <a href="/"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+        </div>
+
+    </header>
+
+    <div class="main">
+        <div class="customer_name">
+            <h3>Welcome <%=username%></h3>
+            
+        </div>
+            <br>
+        <div class="table-responsive mx-auto">
+
+            <table class="table">
     
-    <%-include('../partials/admin/left.ejs')%>
+                <tbody>
+                    <!-- <div class="container text-center">
+                        <h4>Majdor Detail's </h4>
+                    </div> -->
+                    <tr>
+                        <td style="width: 65%;">
+                            <!-- User Image -->
+                            <img src="/images/carpenter-svgrepo-com.svg" alt="User Image"
+                                class="img-fluid rounded-circle" style="max-width: 100%;">
+                        </td>
+                        <td class="tabledata_details">
+                            <!-- User Details Table -->
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th>First Name:</th>
+                                        <td><%=record.firstName%></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Last Name:</th>
+                                        <td><%=record.LastName%></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Address:</th>
+                                        <td><%=record.address%></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Mobile:</th>
+                                        <td><%=record.mobile%></td>
+                                    </tr>
+                                </tbody>
+                                
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <div class="col-md-8">
+                    <a href="/logout"><button class="btn btn-danger">Logout</button></a>
+                    <a href="/profileupdate"><button class="btn btn-success me-2">Profile Update</button></a>
+                </div>
+                <br>
+            </div>    
+    
    
 
     
-    <h2 class="text-center">welcome <%=username%> to profile page </h2>
-    <div class="table-responsive mx-auto">
+    <!-- <h2 class="text-center">welcome <%=username%> to profile page </h2> -->
+    
 
-        <table class="table">
-
-            <tbody>
-                <!-- <div class="container text-center">
-                    <h4>Majdor Detail's </h4>
-                </div> -->
-                <tr>
-                    <td style="width: 20%;">
-                        <!-- User Image -->
-                        <img src="/images/carpenter-svgrepo-com.svg" alt="User Image"
-                            class="img-fluid rounded-circle" style="max-width: 100%;">
-                    </td>
-                    <td>
-                        <!-- User Details Table -->
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <th>First Name:</th>
-                                    <td><%=record.firstName%></td>
-                                </tr>
-                                <tr>
-                                    <th>Last Name:</th>
-                                    <td><%=record.LastName%></td>
-                                </tr>
-                                <tr>
-                                    <th>Address:</th>
-                                    <td><%=record.address%></td>
-                                </tr>
-                                <tr>
-                                    <th>Mobile:</th>
-                                    <td><%=record.mobile%></td>
-                                </tr>
-                            </tbody>
-                            
-                        </table>
-                    </td>
-                </tr>
-            </tbody>
-            <section id="header">
-                <div class="container">
-                    <!-- <div class="col-md-4">
-                        <h5>Welcome <%=username%></h5>
-                    </div> -->
-                    <div class="col-md-8">
-                        <a href="/logout"><button class="btn btn-danger">Logout</button></a>
-                        <a href="/profileupdate"><button class="btn btn-success me-2">Profile Update</button></a>
-                    </div>
-                </div>
-            </section>
-            
-        </table>
-      
-    </div>
+    <script src="https://kit.fontawesome.com/5fb47b5325.js" crossorigin="anonymous"></script>
+       
 </body>
 </html>
