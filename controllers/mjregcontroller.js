@@ -1,6 +1,8 @@
 // const majdoorreg = require('../models/majdoorreg')
 const mjreg = require('../models/majdoorreg')
 const re=require('../models/reg')
+const details=require('../models/confirm')
+const nodemailer = require('nodemailer')
 exports.details = (req, res) => {
     res.render('/majdoormdetails.ejs')
 }
@@ -29,7 +31,7 @@ exports.mlogin = (req, res) => {
     res.render('majdoor/mlogin.ejs', { message: '' })
 }
 exports.mdashboard = async(req, res) => {
-    const record=await re.find()
+    const record=await details.find()
     const username = req.session.username
    
     res.render('majdoor/Majdoor_Dashbord.ejs',{record,username})
@@ -111,7 +113,7 @@ exports.updateform=async(req,res)=>{
     res.render('majdoor/majdoorupdateform.ejs',{record,username})
 }
 exports.updation=async(req,res)=>{
-    const { us, lname, gender, skills, location,add, mobile } = req.body
+    const { us, lname, img,gender, skills, location,add, mobile } = req.body
     const id = req.session.userid
     if (req.file) {
         const filename = req.file.filename
@@ -139,6 +141,44 @@ exports.similiarmajdoor=async(req,res)=>{
         res.status(500).send('Internal Server Error');
       }
 }
+
+exports.deletebooking=async(req,res)=>{
+    const id=req.params.id
+    await details.findByIdAndDelete(id)
+    res.redirect('/majdoor/Majdoor_Dashboard')
+}
+
+exports.confirmbooking=async(req,res)=>{
+    const id=req.params.id
+    
+        const record = await details.findById(id);
+        //console.log(record)
+        const email=record.email
+       // console.log(email)
+        // ... rest of your code
+   
+
+
+    
+     const transporter = nodemailer.createTransport({
+     host: "smtp.gmail.com",
+     port: 587,
+     secure: false,
+          auth: {
+           // TODO: replace `user` and `pass` values from <https://forwardemail.net>
+           user: "srai88723@gmail.com",
+           pass: "dhiu rwta pzuu qffj",
+          },
+         });
+        //console.log('connected to SMTP server')
+        const info = await transporter.sendMail({
+         from: 'srai88723@gmail.com', // sender address
+         to: email, // list of receivers
+        subject: "Booking Confirmation Mail", // Subject line
+         text: "Sorry for delay", // plain text body
+          html: "<b>Your Booking is Confirmed</b>", // html body
+       });
+    }
    
 
 

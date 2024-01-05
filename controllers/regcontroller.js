@@ -1,6 +1,6 @@
 const Reg = require('../models/reg')
 const majdoorreg=require('../models/majdoorreg')
-const coonf=require('../models/confirm')
+const conf=require('../models/confirm')
 const nodemailer = require('nodemailer')
 const bcrypt = require('bcrypt')
 
@@ -258,7 +258,7 @@ exports.loginpagex=(req,res)=>{
     res.render('LogAs.ejs')
 }
 exports.Majdoor_Dashbord=(req,res)=>{
-    res.render('Majdoor_Dashbord.ejs')
+    res.render('Majdoor_Dashbord.ejs',{message:''})
 }
 
 // exports.md=(req,res)=>{
@@ -284,20 +284,31 @@ exports.findskills=async(req,res)=>{
 exports.confirmed=(req,res)=>{
     res.render('confirmationpage.ejs')
 }
-exports.confirmedm=(req,res)=>{
-    console.log(req.body)
+exports.confirmedm=async(req,res)=>{
+    const{email,name,street,pin,state,contact}=req.body
+    const record=new conf({email:email,StreetNumber:street,pincode:pin,state:state,contact:contact})
+    record.save()
 
 
-    // const transporter = nodemailer.createTransport({
-    //     host: "smtp.forwardemail.net",
-    //     port: 465,
-    //     secure: true,
-    //     auth: {
-    //       // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-    //       user: "REPLACE-WITH-YOUR-ALIAS@YOURDOMAIN.COM",
-    //       pass: "REPLACE-WITH-YOUR-GENERATED-PASSWORD",
-    //     },
-    //   });
+     const transporter = nodemailer.createTransport({
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: false,
+        auth: {
+          // TODO: replace `user` and `pass` values from <https://forwardemail.net>
+          user: "srai88723@gmail.com",
+          pass: "dhiu rwta pzuu qffj",
+        },
+       });
+       console.log('connected to SMTP server')
+       const info = await transporter.sendMail({
+        from: 'srai88723@gmail.com', // sender address
+        to: record.email, // list of receivers
+        subject: "This email indicates your booking Request", // Subject line
+        text: "please wait for 5 min ", // plain text body
+        html: "<b>This is your Request booking?</b>", // html body
+        
+      });
 }
 exports.customerdetails=async(req,res)=>{
     const username=req.session.username

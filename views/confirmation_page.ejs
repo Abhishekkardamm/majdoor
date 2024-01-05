@@ -85,11 +85,17 @@
             </div>
 
             <hr>
-            <form"formAwesome" method="POST" action="/smajdoor/658eb9aee9f2a918e9309200">
+            <form id="formAwesome" method="POST">
                 <div class="form-group row">
                     <label for="firstName" class="col-sm-6 col-form-label">Email:</label>
                     <div class="col-sm-6">
-                        <input type="text" name="email" class="form-control" id="Street" placeholder="Email" required>
+                        <input type="text" name="email" class="form-control" id="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="firstName" class="col-sm-6 col-form-label">Full Name:</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="name" class="form-control" id="email" placeholder="Full Name" required>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -102,7 +108,7 @@
                 <div class="form-group row">
                     <label for="Pin code " class="col-sm-6 col-form-label">Pin code </label>
                     <div class="col-sm-6">
-                        <input type="number"  name="pin"class="form-control" id="lastName" placeholder="Number" required>
+                        <input type="number"  name="pin"class="form-control" id="pin" placeholder="Number" required>
                     </div>
                 </div>
 
@@ -128,7 +134,7 @@
                 <div class="form-group row">
                     <label for="Contact Number" class="col-sm-6 col-form-label">Contact Number </label>
                     <div class="col-sm-6">
-                        <input type="text"  name="contact" class="form-control" id="occupation" placeholder="phone_number"
+                        <input type="text"  name="contact" class="form-control" id="contact" placeholder="phone_number"
                             required>
                     </div>
                 </div>
@@ -149,7 +155,7 @@
 
         
         <div class="button-container text-center">
-            <button type="submit" class="btn btn-mod btn-border btn-large animation-one">
+           <button type="submit" class="btn btn-mod btn-border btn-large animation-one">
                 Request For Booking
             </button>
             <a href="majdoor_profiles.html">
@@ -165,28 +171,7 @@
             <br>
         </div>
 
-        <!-- <script>
-            document.getElementById('formAwesome').addEventListener('submit', function (event) {
-                event.preventDefault();
-
-                var firstName = document.getElementById('firstName').value;
-                var lastName = document.getElementById('lastName').value;
-                var email = document.getElementById('email').value;
-                var awesomeness = document.getElementById('awesomeness').value;
-                var occupation = document.getElementById('occupation').value;
-
-                console.log('Form submitted:', {
-                    firstName: firstName,
-                    lastName: lastName,
-                    email: email,
-                    awesomeness: awesomeness,
-                    occupation: occupation
-                });
-
-                this.reset();
-                alert('Form submitted successfully!');
-            });
-        </script>-->
+        
 
         
        
