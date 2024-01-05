@@ -217,7 +217,6 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <!-- <form action="" method="post"> -->
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
@@ -226,8 +225,8 @@
                                     <th>पता</th>
                                     <th>फ़ोन नंबर</th>
                                     <th>काम</th>
-                                    <th>Accept</th>
-                                    <th>Reject</th>
+                                    <th>तारीख</th>
+                                    <th>तनख़्वाह</th>
                                     <th> </th>
                                 </tr>
                             </thead>
@@ -237,7 +236,9 @@
                                     <th>बुकिंग आईडी</th>
                                     <th>पता</th>
                                     <th>फ़ोन नंबर</th>
-                                    
+                                    <th>काम</th>
+                                    <th>तारीख</th>
+                                    <th>तनख़्वाह</th>
                                     <th> </th>
                                 </tr>
                             </tfoot>
@@ -248,21 +249,16 @@
                                 <tr>
                                     <td><%=result.email%></td>
                                     <td><%=result.id%></td>
-<<<<<<< Updated upstream
                                     <td><%=result.address%></td>
                                     <td><%=result.mobile%></td>
                                     <td>लकड़ी के सीढ़ी निर्माण</td>
-                                    <!-- <td><%= result.CreateDate.toDateString() %></td> -->
-=======
-                                    <td><%=result.StreetNumber%></td>
-                                    <td><%=result.contact%></td>
->>>>>>> Stashed changes
+                                    <td><%= result.CreateDate.toDateString() %></td>
                                     <td>200</td>
                                     <td>
-                                            <a href="/majdoor/confirmbooking/<%=result.id%>" class="accept"><span class="fa fa-check"></span></a><br><br>
+                                            <a href="#" class="accept"><span class="fa fa-check"></span></a><br><br>
                                             </td>
                                             <td>        
-                                            <a href="/majdoor/deletebooking/<%=result.id%>" class="deny"><span class="fa fa-close"></span></a>
+                                            <a href="#" class="deny"><span class="fa fa-close"></span></a>
                                         
                                     </td>
                                 </tr>
@@ -270,7 +266,6 @@
                                 
                             </tbody>
                         </table>
-                    <!-- </form> -->
                     </div>
                 </div>
                 <div class="card-footer small text-muted">अपडेट 11:59 </div>

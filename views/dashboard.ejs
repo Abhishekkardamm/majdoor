@@ -92,55 +92,37 @@
                             <div class="table-responsive">
                                 <table class="table text-grey-darkest">
                                     <thead class="bg-grey-dark text-white text-normal">
+                                       
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Name</th>
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Current</th>
-                                        <th scope="col">Change</th>
+                                        <th scope="col">Skills</th>
+                                        <th scope="col">Location</th>
+                                        <th scope="col">Ratings</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>
-                                            <button class="bg-blue-500 hover:bg-blue-800 text-white font-light py-1 px-2 rounded-full">
-                                                Twitter
-                                            </button>
-                                        </td>
-                                        <td>4500</td>
-                                        <td>4600</td>
-                                        <td>
-                                            <span class="text-green-500"><i class="fas fa-arrow-up"></i>5%</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>
-                                            <button class="bg-primary hover:bg-primary-dark text-white font-light py-1 px-2 rounded-full">
-                                                Facebook
-                                            </button>
-                                        </td>
-                                        <td>10000</td>
-                                        <td>3000</td>
-                                        <td>
-                                            <span class="text-red-500"><i class="fas fa-arrow-down"></i>65%</span>
-                                        </td>
-                                    </tr>
+                                        <%record.forEach((result,key)=>{%>
+                                            <tr>
+                                                <th scope="row"><%=key+1%></th>
+                                                <td><%=result.username%></td>
+                                                <td>
+                                                    <button class="bg-blue-500 hover:bg-blue-800 text-white font-light py-1 px-2 rounded-full">
+                                                        <%=result.skills%>
+                                                    </button>
+                                                </td>
+                                               
+                                                <td><%=result.location%></td>
+                                                <td>
+                                                    <span class="text-yellow-500"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                </td>
+                                            </tr>
 
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>
-                                            <button class="bg-success hover:bg-success-dark text-white font-light py-1 px-2 rounded-full">
-                                                Amazon
-                                            </button>
-                                        </td>
-                                        <td>10000</td>
-                                        <td>3000</td>
-                                        <td>
-                                            <span class="text-red-500"><i class="fas fa-arrow-down"></i>65%</span>
-                                        </td>
-                                    </tr>
+                                            <% })%>
+                                    
+                                    
+
+                                    
 
                                     <!-- <tr>
                                         <th scope="row">4</th>
@@ -180,53 +162,30 @@
                                     <thead class="bg-grey-dark text-white text-normal">
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Current</th>
-                                        <th scope="col">Change</th>
+                                        <th scope="col">E-mail Id</th>
+                                        <!-- <th scope="col">Last</th> -->
+                                        <th scope="col">Total bookings</th>
+                                        <th scope="col">Rating</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>
-                                            <button class="bg-blue-500 hover:bg-blue-800 text-white font-light py-1 px-2 rounded-full">
-                                                Twitter
-                                            </button>
-                                        </td>
-                                        <td>4500</td>
-                                        <td>4600</td>
-                                        <td>
-                                            <span class="text-green-500"><i class="fas fa-arrow-up"></i>5%</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>
-                                            <button class="bg-primary hover:bg-primary-dark text-white font-light py-1 px-2 rounded-full">
-                                                Facebook
-                                            </button>
-                                        </td>
-                                        <td>10000</td>
-                                        <td>3000</td>
-                                        <td>
-                                            <span class="text-red-500"><i class="fas fa-arrow-down"></i>65%</span>
-                                        </td>
-                                    </tr>
+                                        <%record2.forEach((result,key)=>{%>
+                                            <tr>
+                                                <th scope="row"><%=key+1%></th>
+                                                <th scope="row">  <%=result.email%></th>
+                                             
+                                                <td>45</td>
+                                                
+                                                <td>
+                                                    <span class="text-yellow-500"><i class="fa-solid fa-star"></i></span>
+                                                </td>
+                                            </tr>
 
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>
-                                            <button class="bg-success hover:bg-success-dark text-white font-light py-1 px-2 rounded-full">
-                                                Amazon
-                                            </button>
-                                        </td>
-                                        <td>10000</td>
-                                        <td>3000</td>
-                                        <td>
-                                            <span class="text-red-500"><i class="fas fa-arrow-down"></i>65%</span>
-                                        </td>
-                                    </tr>
+                                            <% })%>
+                                   
+                                   
+
+                                    
 
                                     <!-- <tr>
                                         <th scope="row">4</th>
@@ -259,7 +218,7 @@
              <div class="flex flex-1 flex-col md:flex-row lg:flex-row mx-2 mt-2">
                 <div class="rounded overflow-hidden shadow bg-white mx-2 w-full pt-2">
                     <div class="px-6 py-2 border-b border-light-grey">
-                        <div class="font-bold text-xl">Progress Among Projects</div>
+                        <div class="font-bold text-xl">Working progress of labour's based on colour code's</div>
                     </div>
                     <div class="">
                         <div class="w-full">
@@ -298,7 +257,7 @@
 
  <!--/Profile Tabs-->
 
- <div
+ <!-- <div
  class="mb-2 md:mx-2 lg:mx-2 border-solid border-gray-200 rounded border shadow-sm ">
  <div class="bg-gray-200 px-2 py-3 border-solid border-gray-200 border-b">
      Colored Table
@@ -338,9 +297,9 @@
 </div>
 
           
-            
+             -->
     
-    <%-include('../partials/admin/footer.ejs')%>
+
     <script src="https://kit.fontawesome.com/5fb47b5325.js" crossorigin="anonymous"></script> 
 
     <script>var sidebar = document.getElementById('sidebar');

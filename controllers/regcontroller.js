@@ -99,10 +99,12 @@ exports.logincheck = async (req, res) => {
     }
 }
 
-exports.dashboard = (req, res) => {
+exports.dashboard = async(req, res) => {
     try {
         const username = req.session.username
-        res.render("dashboard.ejs", { username })
+        const record=await majdoorreg.find()
+        const record2=await Reg.find()
+        res.render("dashboard.ejs", { username,record,record2 })
     } catch (error) {
         console.log(error.message)
     }
@@ -314,4 +316,9 @@ exports.customerdetails=async(req,res)=>{
     const username=req.session.username
     const record=await Reg.findOne({email:username})
     res.render('customerdetails.ejs',{record,username})
+}
+exports.deletecustomer=async(req,res)=>{
+    const id=req.params.id
+    await Reg.findByIdAndDelete(id)
+    res.redirect('/admin/users')
 }
